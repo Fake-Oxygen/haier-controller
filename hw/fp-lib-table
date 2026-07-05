@@ -1,0 +1,8 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "connectors") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/connectors.pretty") (options "") (descr ""))
+	(lib (name "SMD") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/SMD.pretty") (options "") (descr ""))
+	(lib (name "switches") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/switches.pretty") (options "") (descr ""))
+	(lib (name "THT") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/THT.pretty") (options "") (descr ""))
+	(lib (name "relays") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/relays.pretty") (options "") (descr ""))
+)
