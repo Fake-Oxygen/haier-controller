@@ -1,0 +1,2 @@
+CompileFlags:
+  Remove: [-fstrict-volatile-bitfields, -fno-reorder-functions, -fno-printf-return-value]

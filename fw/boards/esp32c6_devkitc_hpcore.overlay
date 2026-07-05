@@ -1,0 +1,85 @@
+
+&pinctrl {
+  uart1_default: uart1_default {
+    group1 {
+      pinmux = <UART1_TX_GPIO23>;
+      output-high;
+    };
+    group2 {
+      pinmux = <UART1_RX_GPIO22>;
+      bias-pull-up;
+    };
+  };
+};
+
+/ {
+  
+  aliases {
+    led0 = &status_led;
+    pump = &rs_switch;
+    heating = &heat_sw;
+    cooling = &cool_sw;
+    freq-lim = &lim_sw;
+    dev-id = &ds2401;
+    temp = &ds18b20;
+  };
+
+  leds {
+    compatible = "gpio-leds";
+    status_led: led_0 {
+        gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+        label = "Status LED";
+    };
+  };
+
+  relays {
+    compatible = "gpio-leds";
+
+    rs_switch: relay_0 {
+      gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+      label = "Disconnects original driver from pump";
+    };
+
+    heat_sw: relay_1 {
+      gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+      label = "enable heating";
+    };
+
+    cool_sw: relay_2 {
+      gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+      label = "enable cooling";
+    };
+
+    lim_sw: relay_3 {
+      gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
+      label = "enable frequency limit";
+    };
+  };
+  
+  w1_bus_id: w1_bus_id {
+    compatible = "zephyr,w1-gpio";
+    gpios = <&gpio0 0 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
+    
+    ds2401: ds2401 {
+      /* compatible = "" */
+    };
+  };
+
+  w1_bus_temp: w1_bus_temp {
+    compatible = "zephyr,w1-gpio";
+    gpios = <&gpio0 1 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
+    
+    ds18b20: ds18b20 {
+
+    };
+  };
+    
+
+};
+
+&uart1 {
+  status = "okay";
+  current-speed = <115200>;
+  pinctrl-0 = <&uart1_default>;
+  pinctrl-names = "default";
+};

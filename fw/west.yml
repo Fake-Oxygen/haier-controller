@@ -1,0 +1,18 @@
+manifest:
+  remotes:
+    - name: zephyrproject
+      url-base: https://github.com/zephyrproject-rtos
+  projects:
+    - name: zephyr
+      repo-path: zephyr
+      remote: zephyrproject
+      revision: main
+      clone-depth: 1
+      import:
+        path-prefix: external
+        name-allowlist:
+          - hal_espressif
+          - cmsis
+          - cmsis_6
+          - segger
+          - mbedtls
