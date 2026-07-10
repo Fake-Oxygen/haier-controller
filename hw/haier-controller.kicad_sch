@@ -1810,8 +1810,8 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 0 0)
+			(property "Footprint" "connectors:TC2050-IDC-NL"
+				(at 2.794 -38.608 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -7015,7 +7015,7 @@
 			(property "Reference" "R?"
 				(at 2.286 3.048 0)
 				(show_name no)
-				(do_not_autoplace yes)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -7025,15 +7025,15 @@
 			(property "Value" "5k1"
 				(at 2.794 1.524 0)
 				(show_name no)
-				(do_not_autoplace yes)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 0 0)
+			(property "Footprint" "SMD:C_0603"
+				(at 2.54 -7.874 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -8272,6 +8272,10 @@
 	(no_connect
 		(at 41.91 52.07)
 		(uuid "488c5e7c-03a9-4b68-85b5-4333f0486141")
+	)
+	(no_connect
+		(at 182.88 106.68)
+		(uuid "58afe044-4969-47ca-8768-7da2dd368f78")
 	)
 	(no_connect
 		(at 259.08 121.92)
@@ -13036,7 +13040,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SMD:C_0603"
 			(at 43.815 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18546,7 +18550,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SMD:C_0603"
 			(at 43.815 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -23608,7 +23612,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "connectors:TC2050-IDC-NL"
 			(at 26.67 137.795 0)
 			(hide yes)
 			(show_name no)
