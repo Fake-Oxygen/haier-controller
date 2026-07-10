@@ -5636,6 +5636,27 @@
 					)
 				)
 			)
+			(symbol "LD1117S33CTR_1_0"
+				(pin no_connect line
+					(at 15.24 -5.08 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
 			(symbol "LD1117S33CTR_1_1"
 				(rectangle
 					(start 0 0)
@@ -8266,6 +8287,10 @@
 		(uuid "145cb7b8-4d91-40c3-b2f0-a7a12804c999")
 	)
 	(no_connect
+		(at 131.445 100.33)
+		(uuid "25138bb3-1815-458e-97c5-04451e639bdd")
+	)
+	(no_connect
 		(at 41.275 154.305)
 		(uuid "35157523-bd20-4137-a712-c3affd3055a3")
 	)
@@ -8274,7 +8299,7 @@
 		(uuid "488c5e7c-03a9-4b68-85b5-4333f0486141")
 	)
 	(no_connect
-		(at 182.88 106.68)
+		(at 131.445 102.87)
 		(uuid "58afe044-4969-47ca-8768-7da2dd368f78")
 	)
 	(no_connect
@@ -8292,6 +8317,10 @@
 	(no_connect
 		(at 41.91 44.45)
 		(uuid "9fa7a006-f658-42a2-936f-3f13d08bbdae")
+	)
+	(no_connect
+		(at 131.445 97.79)
+		(uuid "a2d719ba-a3f8-424f-96df-d641f00d3539")
 	)
 	(no_connect
 		(at 196.215 53.975)
@@ -25685,6 +25714,9 @@
 		)
 		(pin "1"
 			(uuid "5836be9d-73fd-403d-b406-210d2b01b1ff")
+		)
+		(pin "4"
+			(uuid "5c937952-1db2-4ebc-9db5-d0735327865a")
 		)
 		(instances
 			(project "haier-controller"
