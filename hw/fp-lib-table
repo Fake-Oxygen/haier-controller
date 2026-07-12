@@ -5,4 +5,5 @@
 	(lib (name "switches") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/switches.pretty") (options "") (descr ""))
 	(lib (name "THT") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/THT.pretty") (options "") (descr ""))
 	(lib (name "relays") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/relays.pretty") (options "") (descr ""))
+	(lib (name "mechanical") (type "KiCad") (uri "/home/morow/Projects/kicad-component-library/footprints/mechanical.pretty") (options "") (descr ""))
 )

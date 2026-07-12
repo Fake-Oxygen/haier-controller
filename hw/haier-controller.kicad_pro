@@ -69,8 +69,35 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        [
+          "hole_clearance|64780000|140600000|c599ebb0-5c1b-4649-86b9-95590a3abc8b|bc11f2da-7e61-4306-9e73-901cbcb96aaf",
+          ""
+        ],
+        [
+          "silk_edge_clearance|58000000|129300000|310ea0d7-291e-4f93-ada5-f9a797b77687|1f01fb8b-acf8-490a-a763-407183ad9a0c",
+          ""
+        ],
+        [
+          "silk_edge_clearance|58000000|137700000|310ea0d7-291e-4f93-ada5-f9a797b77687|4f5bfe72-1264-430e-95bb-6580ecaf54ea",
+          ""
+        ],
+        [
+          "silk_edge_clearance|58000000|138500000|310ea0d7-291e-4f93-ada5-f9a797b77687|488ec4d4-4dce-4260-811b-67ae92a6e3ba",
+          ""
+        ],
+        [
+          "silk_edge_clearance|58000000|148500000|310ea0d7-291e-4f93-ada5-f9a797b77687|b806d621-8388-45de-ad7d-39bd26b8fd4e",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -122,7 +149,7 @@
         "starved_thermal": "error",
         "text_height": "warning",
         "text_on_edge_cuts": "error",
-        "text_thickness": "warning",
+        "text_thickness": "ignore",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
         "track_angle": "error",
@@ -140,21 +167,21 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.1,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.2,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.25,
+        "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
+        "min_text_height": 0.7,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
-        "min_via_annular_width": 0.1,
+        "min_track_width": 0.1,
+        "min_via_annular_width": 0.2,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -203,7 +230,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2,
+        0.35
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +261,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -495,7 +531,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -648,7 +684,7 @@
         "uuid": "2531e837-23eb-4a10-aa8a-546e9218b917"
       }
     ],
-    "used_designators": "TP1-13,R1-23,SW1,+3.3V1-13,GND1-41,P1,K1-4,PWR1,J1-12,Q1-5,C1-16,VBUS1-9,U1-6,D1-16",
+    "used_designators": "J1-12,PWR1,K1-4,GND1-41,+3.3V1-13,D1-16,U1-6,C1-16,VBUS1-9,Q1-5,VBUS_A3,P1,H1-4,VBUS_B4,SW1,#GND29,#GND42,TP1-13,R1-23",
     "variants": []
   },
   "sheets": [
