@@ -168,7 +168,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Capacitors:KGM21AR51C226KU"
+		(symbol "Capacitors:GRM21BC81C226ME44L"
 			(pin_numbers
 				(hide yes)
 			)
@@ -191,8 +191,8 @@
 					)
 				)
 			)
-			(property "Value" "22u"
-				(at 1.778 -4.064 0)
+			(property "Value" "22uF"
+				(at 2.286 -4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -202,7 +202,7 @@
 				)
 			)
 			(property "Footprint" "SMD:C_0805"
-				(at 2.54 -10.414 0)
+				(at 0.254 -13.462 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -212,8 +212,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.mouser.pl/datasheet/3/5926/1/cx5r_KGM.pdf"
-				(at 4.318 -8.636 0)
+			(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BC81C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20250813151745"
+				(at 1.016 -5.842 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -223,8 +223,8 @@
 					)
 				)
 			)
-			(property "Description" "Multilayer Ceramic Capacitors MLCC - SMD/SMT 16V 22uF X5R 0805 10%"
-				(at 1.27 -6.858 0)
+			(property "Description" "Kondensator: ceramiczny; MLCC; 22uF; 16V; X6S; ±20%; SMD; 0805; 180mm"
+				(at 5.334 -8.382 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -234,8 +234,8 @@
 					)
 				)
 			)
-			(property "MPN" "KGM21AR51C226KU"
-				(at 5.842 -12.446 0)
+			(property "MPN" "GRM21BC81C226ME44L"
+				(at 0 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -245,18 +245,7 @@
 					)
 				)
 			)
-			(property "Voltage" "16V"
-				(at 1.524 -5.588 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "CAPACITOR, SMT, 0805"
+			(property "ki_keywords" "SMT, CAPACITOR, 0805"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -267,7 +256,7 @@
 					)
 				)
 			)
-			(symbol "KGM21AR51C226KU_0_0"
+			(symbol "GRM21BC81C226ME44L_0_0"
 				(pin passive line
 					(at 0 0 0)
 					(length 1.5)
@@ -305,7 +294,7 @@
 					)
 				)
 			)
-			(symbol "KGM21AR51C226KU_0_1"
+			(symbol "GRM21BC81C226ME44L_0_1"
 				(rectangle
 					(start 1.524 1.016)
 					(end 1.524 -1.016)
@@ -3438,7 +3427,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "LEDs:150060VS75000"
+		(symbol "LEDs:LTST-C190KGKT"
 			(pin_numbers
 				(hide yes)
 			)
@@ -3462,7 +3451,7 @@
 				)
 			)
 			(property "Value" "Green"
-				(at 2.54 -3.81 0)
+				(at 2.286 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3472,7 +3461,7 @@
 				)
 			)
 			(property "Footprint" "SMD:LED_0603"
-				(at 6.858 -13.462 0)
+				(at -0.508 -10.414 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3482,8 +3471,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060VS75000.pdf"
-				(at 40.132 -9.398 0)
+			(property "Datasheet" "https://www.tme.eu/Document/02bca468f5ec2519e3018913b2ddaf5e/LTST-C190KGKT.pdf"
+				(at 2.032 -6.858 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3493,8 +3482,8 @@
 					)
 				)
 			)
-			(property "Description" "Single Colour LEDs WL-SMCW SMDMono TpVw Waterclr 0603 BrtGrn"
-				(at 32.766 -11.43 0)
+			(property "Description" "LED; zielony; SMD; 0603; 18÷71mcd; 1,9÷2,4VDC; 1,6x0,8x0,8mm; 130°"
+				(at 2.286 -9.144 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3504,8 +3493,8 @@
 					)
 				)
 			)
-			(property "MPN" "150060VS75000"
-				(at 7.62 -7.366 0)
+			(property "MPN" "LTST-C190KGKT"
+				(at 1.524 -4.572 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3516,7 +3505,7 @@
 				)
 			)
 			(property "Color" "Green"
-				(at 2.54 -5.588 0)
+				(at -0.254 -12.192 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3526,7 +3515,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "LED, SMT, GREEN, 0603"
+			(property "ki_keywords" "LED, SMT, 0603, GREEN"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3537,7 +3526,7 @@
 					)
 				)
 			)
-			(symbol "150060VS75000_0_1"
+			(symbol "LTST-C190KGKT_0_1"
 				(polyline
 					(pts
 						(xy 1.27 0) (xy 2.286 0.762) (xy 2.286 -0.762) (xy 1.27 0)
@@ -3611,7 +3600,7 @@
 					)
 				)
 			)
-			(symbol "150060VS75000_1_0"
+			(symbol "LTST-C190KGKT_1_0"
 				(pin passive line
 					(at 0 0 0)
 					(length 1.27)
@@ -7006,6 +6995,147 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Resistors:CRCW06031K00FKEA"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R?"
+				(at 1.016 -1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1k"
+				(at 1.016 -3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "SMD:R_0603"
+				(at 1.27 -13.716 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+				(at 2.286 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+				(at 1.778 -6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CRCW06031K00FKEA"
+				(at 0.762 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "RESISTOR, SMT, 0603"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CRCW06031K00FKEA_0_1"
+				(rectangle
+					(start 1.27 0.508)
+					(end 3.81 -0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CRCW06031K00FKEA_1_0"
+				(pin passive line
+					(at 5.08 0 180)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Resistors:CRCW06035K10FKEA"
 			(pin_numbers
 				(hide yes)
@@ -7263,158 +7393,6 @@
 				)
 			)
 			(symbol "CRGH0603F10K_1_0"
-				(pin passive line
-					(at 5.08 0 180)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Resistors:CRGH0603F1K0"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R?"
-				(at 1.016 -1.778 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "1k"
-				(at 1.016 -3.302 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "SMD:R_0603"
-				(at 5.842 -13.208 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-				(at 35.052 -11.176 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-				(at 26.162 -8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "CRGH0603F1K0 "
-				(at 7.874 -6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Power" "0.2W"
-				(at 2.286 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "RESISTOR, SMT, 0603"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "CRGH0603F1K0_0_1"
-				(rectangle
-					(start 1.27 0.508)
-					(end 3.81 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CRGH0603F1K0_1_0"
 				(pin passive line
 					(at 5.08 0 180)
 					(length 1.27)
@@ -12029,6 +12007,96 @@
 		(uuid "ffdd31ac-8b41-4f34-aed6-ecfe7be17164")
 	)
 	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 135.89 145.415 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "039bd8e9-084e-4954-ac02-e1115c4b43b9")
+		(property "Reference" "R18"
+			(at 135.763 144.399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 140.843 144.399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 137.16 159.131 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 138.176 154.305 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 137.668 152.273 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 136.652 156.845 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "75d12426-5d66-46a9-a112-ead8ce67c565")
+		)
+		(pin "1"
+			(uuid "d7fc76a8-59c9-4516-9c67-140cb7b70375")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connectors:S4B-XH-A-1_(LF)(SN)")
 		(at 242.57 61.595 0)
 		(unit 1)
@@ -12469,107 +12537,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 140.97 180.975 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0c54d344-9d64-40c0-bcad-efde0ee6f323")
-		(property "Reference" "R19"
-			(at 141.732 182.118 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 135.89 181.864 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 135.128 167.767 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 105.918 169.799 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 114.808 172.085 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 133.096 174.117 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 138.684 175.895 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3ba26543-7354-4fa2-87d1-1468cc2c0e88")
-		)
-		(pin "2"
-			(uuid "ec0e434d-f0d4-4ba1-adae-bc87cbac9596")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Globals:+3.3V")
 		(at 74.295 76.2 0)
 		(unit 1)
@@ -12904,107 +12871,6 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "TP4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 140.97 145.415 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "13e86c9c-aa4d-499d-bf15-ef096375e2bf")
-		(property "Reference" "R18"
-			(at 141.732 146.558 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 135.89 146.304 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 135.128 132.207 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 105.918 134.239 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 114.808 136.525 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 133.096 138.557 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 138.684 140.335 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "11d9b91a-3ddd-470d-af88-9dfd541b1212")
-		)
-		(pin "2"
-			(uuid "92fdc6e8-31ba-4291-a0f8-72eff04e55df")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -13500,6 +13366,109 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LEDs:LTST-C190KGKT")
+		(at 107.315 37.465 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1d9d6753-2022-4544-87ad-bd810de35b2f")
+		(property "Reference" "D1"
+			(at 108.204 34.9251 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Green"
+			(at 108.204 36.576 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:LED_0603"
+			(at 117.729 37.973 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/02bca468f5ec2519e3018913b2ddaf5e/LTST-C190KGKT.pdf"
+			(at 114.173 35.433 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LED; zielony; SMD; 0603; 18÷71mcd; 1,9÷2,4VDC; 1,6x0,8x0,8mm; 130°"
+			(at 116.459 35.179 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LTST-C190KGKT"
+			(at 111.887 35.941 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Color" "Green"
+			(at 119.507 37.719 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e892fa2e-da18-499c-b702-f82ee5a4beeb")
+		)
+		(pin "1"
+			(uuid "6d19fe83-ce31-4d9b-852b-7ab04216d5fd")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -14379,109 +14348,6 @@
 		)
 	)
 	(symbol
-		(lib_id "LEDs:150060VS75000")
-		(at 189.865 137.795 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "29118958-4019-479b-96fa-3f07d1e93f23")
-		(property "Reference" "D15"
-			(at 188.341 135.636 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 188.341 137.16 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "SMD:LED_0603"
-			(at 203.327 130.937 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060VS75000.pdf"
-			(at 199.263 97.663 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Colour LEDs WL-SMCW SMDMono TpVw Waterclr 0603 BrtGrn"
-			(at 201.295 105.029 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "150060VS75000"
-			(at 197.231 130.175 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Color" "Green"
-			(at 195.453 135.255 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "2bcb9805-99a3-4b82-af96-6b27a01a1ea5")
-		)
-		(pin "1"
-			(uuid "5b7fefd0-4b58-461e-a1b6-c3a5012275f0")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "D15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connectors:DG240W-2.54-02P-15-00A(H)")
 		(at 172.72 174.625 180)
 		(unit 1)
@@ -15051,8 +14917,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 189.865 143.51 180)
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 250.19 141.605 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15060,9 +14926,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "326ca9b6-7119-4653-8ef3-dc6496e5940f")
-		(property "Reference" "R17"
-			(at 190.627 144.653 0)
+		(uuid "33132594-d96a-4a31-9e17-37272aa5fd6b")
+		(property "Reference" "R23"
+			(at 247.396 140.335 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15072,7 +14938,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 184.785 144.399 0)
+			(at 246.634 138.557 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15082,7 +14948,7 @@
 			)
 		)
 		(property "Footprint" "SMD:R_0603"
-			(at 184.023 130.302 0)
+			(at 263.906 140.335 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15092,8 +14958,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 154.813 132.334 0)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 259.08 139.319 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15103,8 +14969,8 @@
 				)
 			)
 		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 163.703 134.62 0)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 257.048 139.827 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15114,8 +14980,8 @@
 				)
 			)
 		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 181.991 136.652 0)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 261.62 140.843 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15124,28 +14990,17 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "Power" "0.2W"
-			(at 187.579 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "30f82671-43e2-428f-b84d-d8672fe19c2d")
 		)
 		(pin "2"
-			(uuid "d7d64de1-b33d-4689-a1c5-b247430cec2a")
+			(uuid "0ed4f0e3-b81d-4b00-96cf-8ac76b3b5332")
+		)
+		(pin "1"
+			(uuid "4895ea0e-99bd-4925-9da2-5e9ff16a40ab")
 		)
 		(instances
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R17")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -15599,109 +15454,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Capacitors:KGM21AR51C226KU")
-		(at 86.36 73.025 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3af48a2b-d709-4f5c-9b5d-48c0ea5a9224")
-		(property "Reference" "C12"
-			(at 87.122 69.977 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "22u"
-			(at 87.122 72.517 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "SMD:C_0805"
-			(at 96.774 70.485 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/5926/1/cx5r_KGM.pdf"
-			(at 94.996 68.707 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Multilayer Ceramic Capacitors MLCC - SMD/SMT 16V 22uF X5R 0805 10%"
-			(at 93.218 71.755 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "KGM21AR51C226KU"
-			(at 98.806 67.183 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" "16V"
-			(at 91.948 71.501 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "03e75135-b567-4c31-b5e1-8512fea87631")
-		)
-		(pin "1"
-			(uuid "44aa31b8-eab4-475e-b366-d8754632486d")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "C12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Swtches:PTS526SM15SMTR2_LFS")
 		(at 26.035 120.65 270)
 		(unit 1)
@@ -15884,107 +15636,6 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 256.54 146.05 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "407cf6f1-b37e-4875-ad62-1a9cab6b5ab9")
-		(property "Reference" "R16"
-			(at 257.302 147.193 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 251.46 146.939 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 250.698 132.842 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 221.488 134.874 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 230.378 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 248.666 139.192 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 254.254 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a4d477e5-590c-4554-8bc3-01fef7e819a1")
-		)
-		(pin "2"
-			(uuid "d057cc27-6fe4-4e14-9dea-f80123a0d5e4")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -16516,107 +16167,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 108.585 33.02 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "48396e33-8436-420d-9d7b-a37c15f624c4")
-		(property "Reference" "R2"
-			(at 108.585 32.131 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 113.665 32.131 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 114.427 46.228 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 143.637 44.196 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 134.747 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 116.459 39.878 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 110.871 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "80751347-8d49-4683-b196-955dd9e61144")
-		)
-		(pin "2"
-			(uuid "702f22e2-8300-4867-9e8b-5c56377f47f7")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Globals:VBUS")
 		(at 151.765 163.83 0)
 		(unit 1)
@@ -16768,109 +16318,6 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "VBUS_B2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LEDs:150060VS75000")
-		(at 107.315 37.465 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4c5fe10b-4231-481f-a1b2-e67fc9cf514c")
-		(property "Reference" "D1"
-			(at 108.077 35.687 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Green"
-			(at 108.077 37.211 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "SMD:LED_0603"
-			(at 120.777 30.607 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060VS75000.pdf"
-			(at 116.713 -2.667 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Colour LEDs WL-SMCW SMDMono TpVw Waterclr 0603 BrtGrn"
-			(at 118.745 4.699 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "150060VS75000"
-			(at 114.681 29.845 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Color" "Green"
-			(at 112.903 34.925 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6b698357-70ed-49f1-be15-96f8ee25e022")
-		)
-		(pin "1"
-			(uuid "f4b02bbd-7261-469c-ae83-217296258de7")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -17924,107 +17371,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 189.865 128.905 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6124fb65-64d0-4a5e-a4a1-fd2b69cfee8e")
-		(property "Reference" "R22"
-			(at 187.198 131.191 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 187.706 132.969 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 176.657 134.747 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 178.689 163.957 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 180.975 155.067 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 183.007 136.779 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 184.785 131.191 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "71aa6840-06b4-4e41-b220-2461a5814b60")
-		)
-		(pin "2"
-			(uuid "26cc015e-92fd-41de-927c-08b67a15e2be")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Globals:GND")
 		(at 195.58 151.765 0)
 		(unit 1)
@@ -18579,6 +17925,289 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 144.145 93.345 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6a89d27e-5f97-436a-a489-7b81143695b7")
+		(property "Reference" "R9"
+			(at 144.018 92.329 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 149.098 92.329 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 145.415 107.061 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 146.431 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 145.923 100.203 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 144.907 104.775 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ad46ce8a-72da-4529-8467-29bc55183edf")
+		)
+		(pin "1"
+			(uuid "bd819635-278c-4a51-b4a3-b57d23ba3c7b")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 140.97 135.89 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6b2d39b2-a00c-4864-aa47-40db8e83fb0a")
+		(property "Reference" "R21"
+			(at 138.176 134.62 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 137.414 132.842 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 154.686 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 149.86 133.604 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 147.828 134.112 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 152.4 135.128 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2a11e681-7d72-4925-b37e-ae236a65657f")
+		)
+		(pin "1"
+			(uuid "4100cff1-b9be-4e19-aa84-31876757b437")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LEDs:LTST-C190KGKT")
+		(at 151.765 104.775 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6b850339-d57b-4a8d-aeda-133dd26a178e")
+		(property "Reference" "D5"
+			(at 152.654 102.2351 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Green"
+			(at 152.654 103.886 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:LED_0603"
+			(at 162.179 105.283 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/02bca468f5ec2519e3018913b2ddaf5e/LTST-C190KGKT.pdf"
+			(at 158.623 102.743 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LED; zielony; SMD; 0603; 18÷71mcd; 1,9÷2,4VDC; 1,6x0,8x0,8mm; 130°"
+			(at 160.909 102.489 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LTST-C190KGKT"
+			(at 156.337 103.251 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Color" "Green"
+			(at 163.957 105.029 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ea27546c-52c3-4327-bc77-44ecf6686e99")
+		)
+		(pin "1"
+			(uuid "80179ff2-ce3e-46ed-a25f-d3b25bcbd94e")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -19503,107 +19132,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 140.97 166.37 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7952fb7a-48c0-4803-bfcc-d606ab15a986")
-		(property "Reference" "R20"
-			(at 138.303 168.656 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 138.811 170.434 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 127.762 172.212 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 129.794 201.422 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 132.08 192.532 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 134.112 174.244 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 135.89 168.656 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2d436c0d-ded1-4a74-96d4-41edb07a8cac")
-		)
-		(pin "2"
-			(uuid "02c85850-b5ec-4124-80b6-02d20d00f6c1")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Relays:HFD23/005-1ZS")
 		(at 151.765 135.89 0)
 		(mirror x)
@@ -19866,107 +19394,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 140.97 130.81 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7b30a316-a924-4f14-8eec-36b6238fecbc")
-		(property "Reference" "R21"
-			(at 138.303 133.096 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 138.811 134.874 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 127.762 136.652 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 129.794 165.862 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 132.08 156.972 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 134.112 138.684 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 135.89 133.096 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e5d2041c-d41a-4527-9fcd-fb2ec7223ea4")
-		)
-		(pin "2"
-			(uuid "7e1b66bc-e59f-44f2-b3ce-ba2237ab2a16")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Protection:STS321033B100")
 		(at 81.915 90.17 90)
 		(unit 1)
@@ -20145,109 +19572,6 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "D11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LEDs:150060VS75000")
-		(at 140.97 175.26 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "846a6ead-bdf8-4316-8ea5-c7596e4afdf4")
-		(property "Reference" "D13"
-			(at 139.446 173.101 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 139.446 174.625 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "SMD:LED_0603"
-			(at 154.432 168.402 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060VS75000.pdf"
-			(at 150.368 135.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Colour LEDs WL-SMCW SMDMono TpVw Waterclr 0603 BrtGrn"
-			(at 152.4 142.494 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "150060VS75000"
-			(at 148.336 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Color" "Green"
-			(at 146.558 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "29afb1a3-a734-4bf1-963b-da23cd158c9d")
-		)
-		(pin "1"
-			(uuid "517041d0-1694-4b8f-8e48-e31da8e01245")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -21609,6 +20933,96 @@
 		)
 	)
 	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 140.97 171.45 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "94f433c5-c110-4723-aea7-878f752b5c28")
+		(property "Reference" "R20"
+			(at 138.176 170.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 137.414 168.402 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 154.686 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 149.86 169.164 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 147.828 169.672 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 152.4 170.688 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ec56d900-c0ea-4379-8985-c5698975e5d9")
+		)
+		(pin "1"
+			(uuid "00fb925e-187d-4823-a6ab-5bf2880b55c2")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Globals:GND")
 		(at 29.21 128.905 0)
 		(unit 1)
@@ -22182,6 +21596,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Capacitors:GRM21BC81C226ME44L")
+		(at 86.36 73.025 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a1675536-bab9-450a-acbb-ebed110f57e2")
+		(property "Reference" "C12"
+			(at 86.868 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "22uF"
+			(at 86.868 72.644 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:C_0805"
+			(at 99.822 72.771 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BC81C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20250813151745"
+			(at 92.202 72.009 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Kondensator: ceramiczny; MLCC; 22uF; 16V; X6S; ±20%; SMD; 0805; 180mm"
+			(at 94.742 67.691 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM21BC81C226ME44L"
+			(at 97.79 73.025 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e1d5186a-e487-48d9-b0f9-8f268bc7eb0a")
+		)
+		(pin "2"
+			(uuid "8deeb671-1799-4948-993a-0d63fb490d87")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Globals:GND")
 		(at 200.025 57.785 0)
 		(unit 1)
@@ -22526,6 +22032,109 @@
 		)
 	)
 	(symbol
+		(lib_id "LEDs:LTST-C190KGKT")
+		(at 189.865 137.795 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a76d8ee9-fe4b-42d4-9cce-713a3d0836da")
+		(property "Reference" "D15"
+			(at 183.896 136.144 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Green"
+			(at 183.896 137.668 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:LED_0603"
+			(at 200.279 138.303 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/02bca468f5ec2519e3018913b2ddaf5e/LTST-C190KGKT.pdf"
+			(at 196.723 135.763 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LED; zielony; SMD; 0603; 18÷71mcd; 1,9÷2,4VDC; 1,6x0,8x0,8mm; 130°"
+			(at 199.009 135.509 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LTST-C190KGKT"
+			(at 194.437 136.271 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Color" "Green"
+			(at 202.057 138.049 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5a8b2830-5183-4d70-9440-689ccc048d1d")
+		)
+		(pin "1"
+			(uuid "a82b70b9-a683-4720-a6e5-3d1fa1bd2d91")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Capacitors:MAJCU168BB7104KTEA01")
 		(at 80.01 146.05 90)
 		(unit 1)
@@ -22808,6 +22417,96 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "#GND38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 184.785 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b02859ce-b0e7-467f-a07e-0ffa8568e91c")
+		(property "Reference" "R17"
+			(at 184.658 142.494 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 189.738 142.494 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 186.055 157.226 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 187.071 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 186.563 150.368 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 185.547 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e04462cf-a877-44b9-94f1-6ebf02ef671f")
+		)
+		(pin "1"
+			(uuid "4590d535-9660-49cb-b2f3-4f1da58417ce")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -23170,6 +22869,109 @@
 		)
 	)
 	(symbol
+		(lib_id "LEDs:LTST-C190KGKT")
+		(at 140.97 175.26 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bf16359d-b406-4c83-b586-0478cccbc6c2")
+		(property "Reference" "D13"
+			(at 135.128 173.482 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Green"
+			(at 135.128 175.26 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:LED_0603"
+			(at 151.384 175.768 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/02bca468f5ec2519e3018913b2ddaf5e/LTST-C190KGKT.pdf"
+			(at 147.828 173.228 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LED; zielony; SMD; 0603; 18÷71mcd; 1,9÷2,4VDC; 1,6x0,8x0,8mm; 130°"
+			(at 150.114 172.974 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LTST-C190KGKT"
+			(at 145.542 173.736 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Color" "Green"
+			(at 153.162 175.514 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a4984b82-f37b-4e31-8e37-e497fb2d46dc")
+		)
+		(pin "1"
+			(uuid "f0b4655b-d647-4f89-a50e-0963e8bd6c16")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Resistors:CRCW06030000Z0EI")
 		(at 33.02 119.38 0)
 		(unit 1)
@@ -23428,107 +23230,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 250.19 136.525 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c22244d1-59d4-47e3-9ecf-d11f4f770df1")
-		(property "Reference" "R23"
-			(at 247.523 138.811 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 248.031 140.589 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SMD:R_0603"
-			(at 236.982 142.367 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 239.014 171.577 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 241.3 162.687 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 243.332 144.399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Power" "0.2W"
-			(at 245.11 138.811 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "32efe3c7-57a5-4e1d-b0a8-4183bcbde97c")
-		)
-		(pin "2"
-			(uuid "71ac9447-6bb4-4ee8-8289-4a50b9ffab0b")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Protection:SMAJ12CA-13-F")
 		(at 260.35 89.535 90)
 		(unit 1)
@@ -23713,109 +23414,6 @@
 		)
 	)
 	(symbol
-		(lib_id "LEDs:150060VS75000")
-		(at 257.175 142.24 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c5b3b433-d7a9-4ec4-b53e-a9c09ffe547c")
-		(property "Reference" "D16"
-			(at 254.762 141.351 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Green"
-			(at 261.874 141.097 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "SMD:LED_0603"
-			(at 250.317 128.778 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060VS75000.pdf"
-			(at 217.043 132.842 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Colour LEDs WL-SMCW SMDMono TpVw Waterclr 0603 BrtGrn"
-			(at 224.409 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "150060VS75000"
-			(at 249.555 134.874 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Color" "Green"
-			(at 254.635 136.652 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "ac9d3957-6c79-4cec-977a-f09bfa397504")
-		)
-		(pin "1"
-			(uuid "56121154-78d3-426b-b2f2-06bd25c9e59a")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "D16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Globals:GND")
 		(at 107.315 40.64 0)
 		(unit 1)
@@ -23965,6 +23563,109 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LEDs:LTST-C190KGKT")
+		(at 257.175 142.24 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c910b702-75e4-4e27-ad45-0b0c8f9bbe4d")
+		(property "Reference" "D16"
+			(at 255.778 139.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Green"
+			(at 255.778 141.224 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:LED_0603"
+			(at 257.683 131.826 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/02bca468f5ec2519e3018913b2ddaf5e/LTST-C190KGKT.pdf"
+			(at 255.143 135.382 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LED; zielony; SMD; 0603; 18÷71mcd; 1,9÷2,4VDC; 1,6x0,8x0,8mm; 130°"
+			(at 254.889 133.096 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LTST-C190KGKT"
+			(at 255.651 137.668 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Color" "Green"
+			(at 257.429 130.048 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c48a7e6b-77c7-4a72-9264-ad40306ab5e2")
+		)
+		(pin "1"
+			(uuid "19beded8-cfb1-441a-a038-40fbb78fdbc3")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -24520,109 +24221,6 @@
 		)
 	)
 	(symbol
-		(lib_id "LEDs:150060VS75000")
-		(at 151.765 104.775 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d41088f8-4915-4e15-90bb-944f1832ce60")
-		(property "Reference" "D5"
-			(at 152.527 102.997 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Green"
-			(at 152.527 104.521 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "SMD:LED_0603"
-			(at 165.227 97.917 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060VS75000.pdf"
-			(at 161.163 64.643 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Colour LEDs WL-SMCW SMDMono TpVw Waterclr 0603 BrtGrn"
-			(at 163.195 72.009 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "150060VS75000"
-			(at 159.131 97.155 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Color" "Green"
-			(at 157.353 102.235 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "33411d82-37c1-4ffd-81c5-538a18ae8c2e")
-		)
-		(pin "1"
-			(uuid "20eae7b8-843d-41ac-801f-a098f072a3f2")
-		)
-		(instances
-			(project "haier-controller"
-				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Globals:GND")
 		(at 151.765 107.95 0)
 		(unit 1)
@@ -24957,6 +24555,96 @@
 		)
 	)
 	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 189.865 133.985 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dc34938d-b4c8-4525-8a2a-70384ae1f64d")
+		(property "Reference" "R22"
+			(at 187.071 132.715 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 186.309 130.937 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 203.581 132.715 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 198.755 131.699 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 196.723 132.207 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 201.295 133.223 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "487c509e-57af-460d-96a1-1db76e965a69")
+		)
+		(pin "1"
+			(uuid "87b43ec4-c282-488c-a334-67028b395351")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Globals:GND")
 		(at 80.01 151.765 0)
 		(unit 1)
@@ -25035,8 +24723,8 @@
 		)
 	)
 	(symbol
-		(lib_id "LEDs:150060VS75000")
-		(at 140.97 139.7 90)
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 108.585 33.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25044,31 +24732,29 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "dedda892-ff70-4b47-b698-6b9c0cb0e581")
-		(property "Reference" "D14"
-			(at 139.446 137.541 90)
+		(uuid "dfd7b39a-8d78-41b0-8185-32e605808a6f")
+		(property "Reference" "R2"
+			(at 108.458 32.004 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "Green"
-			(at 139.446 139.065 90)
+		(property "Value" "1k"
+			(at 113.538 32.004 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "SMD:LED_0603"
-			(at 154.432 132.842 0)
+		(property "Footprint" "SMD:R_0603"
+			(at 109.855 46.736 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25078,8 +24764,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060VS75000.pdf"
-			(at 150.368 99.568 0)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 110.871 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25089,8 +24775,8 @@
 				)
 			)
 		)
-		(property "Description" "Single Colour LEDs WL-SMCW SMDMono TpVw Waterclr 0603 BrtGrn"
-			(at 152.4 106.934 0)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 110.363 39.878 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25100,19 +24786,8 @@
 				)
 			)
 		)
-		(property "MPN" "150060VS75000"
-			(at 148.336 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Color" "Green"
-			(at 146.558 137.16 0)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 109.347 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25123,15 +24798,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "ef2a7eca-ac6a-4767-9e78-9b075a51632d")
+			(uuid "04d61d15-7094-4985-9184-2da7fabb8c07")
 		)
 		(pin "1"
-			(uuid "d1031d2c-d477-4847-bb72-c0f664c6e2a3")
+			(uuid "925e2f3b-bf72-41ee-a9ac-2b163eaf1615")
 		)
 		(instances
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "D14")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -25323,8 +24998,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistors:CRGH0603F1K0")
-		(at 149.225 93.345 180)
+		(lib_id "LEDs:LTST-C190KGKT")
+		(at 140.97 139.7 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25332,29 +25007,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e2fc98af-c93b-4455-a5a3-998c3c6e950a")
-		(property "Reference" "R9"
-			(at 149.225 94.234 0)
+		(uuid "e4137f80-4aef-4e5b-aa03-b413273801d5")
+		(property "Reference" "D14"
+			(at 134.62 137.668 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "1k"
-			(at 144.145 94.234 0)
+		(property "Value" "Green"
+			(at 134.62 139.446 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "SMD:R_0603"
-			(at 143.383 80.137 0)
+		(property "Footprint" "SMD:LED_0603"
+			(at 151.384 140.208 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25364,8 +25041,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/3/80/28/ENG_DS_1773204_1_G1.pdf"
-			(at 114.173 82.169 0)
+		(property "Datasheet" "https://www.tme.eu/Document/02bca468f5ec2519e3018913b2ddaf5e/LTST-C190KGKT.pdf"
+			(at 147.828 137.668 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25375,8 +25052,8 @@
 				)
 			)
 		)
-		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 1K0 0.2W"
-			(at 123.063 84.455 0)
+		(property "Description" "LED; zielony; SMD; 0603; 18÷71mcd; 1,9÷2,4VDC; 1,6x0,8x0,8mm; 130°"
+			(at 150.114 137.414 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25386,8 +25063,8 @@
 				)
 			)
 		)
-		(property "MPN" "CRGH0603F1K0 "
-			(at 141.351 86.487 0)
+		(property "MPN" "LTST-C190KGKT"
+			(at 145.542 138.176 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25397,8 +25074,8 @@
 				)
 			)
 		)
-		(property "Power" "0.2W"
-			(at 146.939 88.265 0)
+		(property "Color" "Green"
+			(at 153.162 139.954 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25407,17 +25084,17 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "163a9d57-e31b-43f3-b1e5-9677c09e66bf")
 		)
 		(pin "2"
-			(uuid "297ee674-e3de-4530-800e-980eb1b7465c")
+			(uuid "a1b4bfee-f484-4930-8367-846ddf91d7e8")
+		)
+		(pin "1"
+			(uuid "207daf6e-707a-4d7a-bc09-f9851a3dc662")
 		)
 		(instances
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
-					(reference "R9")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -25623,6 +25300,96 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 251.46 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ea551dcf-4c1b-4691-8cd2-e78c26089c39")
+		(property "Reference" "R16"
+			(at 251.333 145.034 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 256.413 145.034 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 252.73 159.766 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 253.746 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 253.238 152.908 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 252.222 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c918d71b-9bd1-425c-b9cc-0ebfde188266")
+		)
+		(pin "1"
+			(uuid "cb45fa2c-8d2e-4792-b14b-ecfd54632d90")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -26052,6 +25819,96 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Resistors:CRCW06031K00FKEA")
+		(at 135.89 180.975 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f7afb288-3808-48da-860d-d512f5cff827")
+		(property "Reference" "R19"
+			(at 135.763 179.959 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 140.843 179.959 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 137.16 194.691 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2c908ffd2d4ab2e03e319818fc8f0e85/dcrcwe3.pdf"
+			(at 138.176 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rezystor: thick film; 1kΩ; SMD; 0603; 0,1W; ±1%; 75V; -55÷155°C"
+			(at 137.668 187.833 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06031K00FKEA"
+			(at 136.652 192.405 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b57db87c-0304-45bf-b798-3f8c98e1f92e")
+		)
+		(pin "1"
+			(uuid "38d1610c-29a5-4973-ae8b-13f31072eb3a")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R19")
 					(unit 1)
 				)
 			)
