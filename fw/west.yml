@@ -16,3 +16,10 @@ manifest:
           - cmsis_6
           - segger
           - mbedtls
+    - name: mcuboot
+      remote: zephyrproject
+      repo-path: mcuboot
+      revision: main
+      clone-depth: 1
+      path: external/bootloader/mcuboot
+
