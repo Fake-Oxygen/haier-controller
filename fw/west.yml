@@ -16,6 +16,8 @@ manifest:
           - cmsis_6
           - segger
           - mbedtls
+          - tf-psa-crypto
+          - zcbor
     - name: mcuboot
       remote: zephyrproject
       repo-path: mcuboot
