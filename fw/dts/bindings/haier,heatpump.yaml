@@ -1,0 +1,8 @@
+description: "Haier heatpump"
+compatible: "haier,heatpump"
+include: [base.yaml]
+
+properties:
+  slave-addr:
+    type: int
+    required: true

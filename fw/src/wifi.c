@@ -3,12 +3,10 @@
 #include <zephyr/kernel.h>
 #include <zephyr/net/wifi_mgmt.h>
 
-// Event callbacks
 static struct net_mgmt_event_callback wifi_cb;
 static struct net_mgmt_event_callback ipv4_cb;
 static struct net_mgmt_event_callback scan_cb;
 
-// Semaphores
 static K_SEM_DEFINE(sem_wifi, 0, 1);
 static K_SEM_DEFINE(sem_ipv4, 0, 1);
 static K_SEM_DEFINE(sem_wifi_scan, 0, 1);
@@ -16,9 +14,7 @@ static K_SEM_DEFINE(sem_wifi_scan, 0, 1);
 static uint8_t target_channel = WIFI_CHANNEL_ANY;
 static char target_ssid[32];
 
-static void on_wifi_scan_result(struct net_mgmt_event_callback *cb,
-                                uint64_t mgmt_event,
-                                struct net_if *iface)
+static void on_wifi_scan_result(struct net_mgmt_event_callback *cb, uint64_t mgmt_event, struct net_if *iface)
 {
     if (mgmt_event == NET_EVENT_WIFI_SCAN_RESULT) {
         const struct wifi_scan_result *entry = (const struct wifi_scan_result *)cb->info;
@@ -31,9 +27,7 @@ static void on_wifi_scan_result(struct net_mgmt_event_callback *cb,
     }
 }
 
-static void on_wifi_connection_event(struct net_mgmt_event_callback *cb,
-                                     uint64_t mgmt_event,
-                                     struct net_if *iface)
+static void on_wifi_connection_event(struct net_mgmt_event_callback *cb, uint64_t mgmt_event, struct net_if *iface)
 {
     const struct wifi_status *status = (const struct wifi_status *)cb->info;
 
@@ -54,9 +48,7 @@ static void on_wifi_connection_event(struct net_mgmt_event_callback *cb,
     }
 }
 
-static void on_ipv4_obtained(struct net_mgmt_event_callback *cb,
-                             uint64_t mgmt_event,
-                             struct net_if *iface)
+static void on_ipv4_obtained(struct net_mgmt_event_callback *cb, uint64_t mgmt_event, struct net_if *iface)
 {
     if (mgmt_event == NET_EVENT_IPV4_ADDR_ADD) {
         k_sem_give(&sem_ipv4);
@@ -65,7 +57,6 @@ static void on_ipv4_obtained(struct net_mgmt_event_callback *cb,
 
 void wifi_init(void)
 {
-    // MUST listen to both RESULT and DONE for scan completion
     net_mgmt_init_event_callback(&scan_cb, on_wifi_scan_result, 
                                   NET_EVENT_WIFI_SCAN_RESULT | NET_EVENT_WIFI_SCAN_DONE);
     net_mgmt_init_event_callback(&wifi_cb, on_wifi_connection_event,
@@ -82,10 +73,8 @@ int wifi_connect(char *ssid, char *psk)
     int ret;
     struct net_if *iface = net_if_get_default();
     
-    // CRITICAL FIX 1: Zero out struct completely
     struct wifi_connect_req_params params = {0};
 
-    // Store SSID for scan matching
     strncpy(target_ssid, ssid, sizeof(target_ssid) - 1);
     target_channel = WIFI_CHANNEL_ANY;
 
@@ -96,10 +85,8 @@ int wifi_connect(char *ssid, char *psk)
         return ret;
     }
 
-    // Wait for scan done event
     k_sem_take(&sem_wifi_scan, K_FOREVER);
     
-    // CRITICAL FIX 2: Give driver time to exit SCANNING state
     k_msleep(200); 
 
     printk("Scan finished. Connecting...\r\n");
@@ -111,7 +98,6 @@ int wifi_connect(char *ssid, char *psk)
     params.security = WIFI_SECURITY_TYPE_PSK;
     params.band = WIFI_FREQ_BAND_2_4_GHZ;
     
-    // CRITICAL FIX 3: Use detected channel from scan (or fallback to ANY)
     params.channel = target_channel; 
     params.mfp = WIFI_MFP_DISABLE;
     params.timeout = SYS_FOREVER_MS;

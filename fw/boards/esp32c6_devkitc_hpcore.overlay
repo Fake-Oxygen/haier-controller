@@ -79,7 +79,23 @@
 
 &uart1 {
   status = "okay";
-  current-speed = <115200>;
+  current-speed = <9600>;
   pinctrl-0 = <&uart1_default>;
   pinctrl-names = "default";
+
+  modbus0: modbus0 {
+    compatible = "zephyr,modbus-serial";
+    status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    heatpump0: heatpump@1 {
+      compatible = "haier,heatpump";
+      reg = <1>;
+      slave-addr = <17>;
+      status = "okay";
+    };
+  };
 };
+
+

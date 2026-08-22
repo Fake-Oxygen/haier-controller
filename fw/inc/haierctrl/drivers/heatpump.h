@@ -7,6 +7,17 @@
 #include <stdint.h>
 #include <zephyr/kernel.h>
 
+struct heatpump_config {
+  const struct device *uart;
+  const char *modbus_iface_name;
+  uint8_t slave_addr;
+  uint32_t baud_rate;
+};
+
+struct heatpump_data {
+  int modbus_client_iface;
+};
+
 enum heatpump_state {
   HEATPUMP_STATE_ON = 0,
   HEATPUMP_STATE_OFF
