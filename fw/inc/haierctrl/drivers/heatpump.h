@@ -2,6 +2,7 @@
 #define HAIERCTRL_INCLUDE_DRIVERS_HEATPUMP_H
 
 #include "zephyr/device.h"
+#include "zephyr/drivers/gpio.h"
 #include "zephyr/sys/__assert.h"
 #include "zephyr/toolchain.h"
 #include <stdint.h>
@@ -12,6 +13,7 @@ struct heatpump_config {
   const char *modbus_iface_name;
   uint8_t slave_addr;
   uint32_t baud_rate;
+  struct gpio_dt_spec enable_gpio;
 };
 
 struct heatpump_data {

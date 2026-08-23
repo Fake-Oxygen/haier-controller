@@ -16,7 +16,6 @@
   
   aliases {
     led0 = &status_led;
-    pump = &rs_switch;
     heating = &heat_sw;
     cooling = &cool_sw;
     freq-lim = &lim_sw;
@@ -35,30 +34,25 @@
   relays {
     compatible = "gpio-leds";
 
-    rs_switch: relay_0 {
-      gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
-      label = "Disconnects original driver from pump";
-    };
-
     heat_sw: relay_1 {
-      gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+      gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>;
       label = "enable heating";
     };
 
     cool_sw: relay_2 {
-      gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+      gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
       label = "enable cooling";
     };
 
     lim_sw: relay_3 {
-      gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
+      gpios = <&gpio0 18 GPIO_ACTIVE_HIGH>;
       label = "enable frequency limit";
     };
   };
   
   w1_bus_id: w1_bus_id {
     compatible = "zephyr,w1-gpio";
-    gpios = <&gpio0 0 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
+    gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
     
     ds2401: ds2401 {
       /* compatible = "" */
@@ -67,7 +61,7 @@
 
   w1_bus_temp: w1_bus_temp {
     compatible = "zephyr,w1-gpio";
-    gpios = <&gpio0 1 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
+    gpios = <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
     
     ds18b20: ds18b20 {
 
@@ -94,6 +88,7 @@
       reg = <1>;
       slave-addr = <17>;
       status = "okay";
+      enable-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
     };
   };
 };

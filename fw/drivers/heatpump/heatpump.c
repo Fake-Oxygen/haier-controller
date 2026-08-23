@@ -1,5 +1,6 @@
 
 #include "zephyr/device.h"
+#include "zephyr/drivers/gpio.h"
 #include "zephyr/drivers/uart.h"
 #include "zephyr/kernel.h"
 #include "zephyr/modbus/modbus.h"
@@ -21,6 +22,21 @@
 LOG_MODULE_REGISTER(heatpump_driver, CONFIG_LOG_DEFAULT_LEVEL);
 
 K_MUTEX_DEFINE(data_mutex);
+
+static int write_pump(const struct device *dev) {
+  const struct heatpump_config *cfg = dev->config;
+  const struct heatpump_data *data = dev->data;
+  if(data->modbus_client_iface < 0)
+    return -EINVAL;
+
+  uint16_t val = 120;
+  gpio_pin_set_dt(&cfg->enable_gpio, 1);
+  k_msleep(1000);
+  int err = modbus_write_holding_regs(data->modbus_client_iface, cfg->slave_addr, 100, &val, 1);
+  k_msleep(1000);
+  gpio_pin_set_dt(&cfg->enable_gpio, 0);
+  return err;
+}
 
 static bool uart_read_bytes(const struct device *dev, uint8_t *buf, size_t len, k_timeout_t timeout) {
   size_t read_count = 0;
@@ -109,6 +125,18 @@ static int heatpump_init(const struct device *dev) {
     return ret;
   }
 
+  if (!gpio_is_ready_dt(&cfg->enable_gpio)) {
+      LOG_ERR("GPIO device %s is not ready!", cfg->enable_gpio.port->name);
+      return -ENODEV;
+  }
+
+  ret = gpio_pin_configure_dt(&cfg->enable_gpio, GPIO_OUTPUT_INACTIVE);
+  if (ret < 0) {
+      LOG_ERR("Failed to configure enable GPIO (err: %d)", ret);
+      return ret;
+  }
+
+  write_pump(dev);
   LOG_INF("Heatpump driver initialized on bus %s", cfg->modbus_iface_name);
   return 0;
 }
@@ -119,6 +147,7 @@ static int heatpump_init(const struct device *dev) {
     .modbus_iface_name = DT_NODE_FULL_NAME(DT_INST_PARENT(inst)), \
     .slave_addr = DT_INST_PROP(inst, slave_addr),  \
     .baud_rate = DT_PROP_OR(DT_INST_BUS(inst), current_speed, 9600), \
+    .enable_gpio = GPIO_DT_SPEC_INST_GET(inst, enable_gpios), \
   };  \
   K_THREAD_DEFINE(sniffer_tid_##inst, 2048, sniffer, &heatpump_cfg_##inst, NULL, NULL, 5, 0, 0); \
   static struct heatpump_data heatpump_data_##inst; \
