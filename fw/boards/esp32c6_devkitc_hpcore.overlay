@@ -21,6 +21,7 @@
     freq-lim = &lim_sw;
     dev-id = &ds2401;
     temp = &ds18b20;
+    heatpump = &heatpump0;
   };
 
   leds {

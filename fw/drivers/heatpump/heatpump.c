@@ -1,4 +1,5 @@
 
+#include "haier_cmd.h"
 #include "zephyr/device.h"
 #include "zephyr/drivers/gpio.h"
 #include "zephyr/drivers/uart.h"
@@ -114,9 +115,63 @@ static void sniffer(void *p1, void *p2, void *p3) {
   }
 }
 
+static enum heatpump_threeway get_3way(const struct device *dev) {
+  struct heatpump_data *data = dev->data;
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  enum heatpump_threeway state = get_3way_state(data->registers.R141, 16);
+  k_mutex_unlock(&data_mutex);
+  return state;
+}
+
+static float read_ch_temp(const struct device *dev) {
+  struct heatpump_data *data = dev->data;
+  float temp; 
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  get_ch_temp(data->registers.R101, 6, &temp);
+  k_mutex_unlock(&data_mutex);
+  return temp;
+}
+
+static float read_dhw_temp(const struct device *dev) {
+  struct heatpump_data *data = dev->data;
+  float temp; 
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  get_dhw_temp(data->registers.R141, 16, &temp);
+  k_mutex_unlock(&data_mutex);
+  return temp;
+}
+
+static enum heatpump_state read_heater_state(const struct device *dev) {
+  struct heatpump_data *data = dev->data;
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  enum heatpump_state state = get_heater_state(data->registers.R141, 16);
+  k_mutex_unlock(&data_mutex);
+  return state;
+}
+
+static enum heatpump_mode read_mode(const struct device *dev) {
+  struct heatpump_data *data = dev->data;
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  enum heatpump_mode mode = get_mode(data->registers.R201, 1);
+  k_mutex_unlock(&data_mutex);
+  return mode;
+}
+
+static enum heatpump_state read_pump_state(const struct device *dev) {
+  struct heatpump_data *data = dev->data;
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  enum heatpump_state state = get_pump_state(data->registers.R141, 16);
+  k_mutex_unlock(&data_mutex);
+  return state;
+}
 
 static const struct heatpump_driver_api heatpump_api = {
-  .get_state = NULL,
+  .get_3way = get_3way,
+  .read_ch_temp = read_ch_temp,
+  .read_dhw_temp = read_dhw_temp,
+  .read_heater_state = read_heater_state,
+  .read_heatpump_mode = read_mode,
+  .read_pump_state = read_pump_state,
 };
 
 static int heatpump_init(const struct device *dev) {
@@ -156,7 +211,6 @@ static int heatpump_init(const struct device *dev) {
       return ret;
   }
 
-  write_pump(dev);
   LOG_INF("Heatpump driver initialized on bus %s", cfg->modbus_iface_name);
   return 0;
 }
