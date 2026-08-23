@@ -55,8 +55,14 @@ static bool uart_read_bytes(const struct device *dev, uint8_t *buf, size_t len, 
   return (read_count == len);
 }
 
+static void parse_registers(const uint8_t *raw, uint16_t *out, size_t len) {
+  for(size_t i = 0; i < len; i++)
+    out[i] = (uint16_t)((raw[i * 2] << 8) | raw[i * 2 + 1]);
+}
+
 static void sniffer(void *p1, void *p2, void *p3) {
   const struct heatpump_config *cfg = p1;
+  struct heatpump_data *data = p2;
   if(!device_is_ready(cfg->uart)) {
     LOG_ERR("UART device not ready!");
     return;
@@ -88,6 +94,20 @@ static void sniffer(void *p1, void *p2, void *p3) {
       k_mutex_lock(&data_mutex, K_FOREVER);
       LOG_HEXDUMP_INF(header, 2, "Header");
       LOG_HEXDUMP_INF(payload, header[1], "Payload");
+      switch (header[1]) {
+      case 0x0C:
+        parse_registers(payload, data->registers.R101, 6);
+        break;
+      case 0x20:
+        parse_registers(payload, data->registers.R141, 16);
+        break;
+      case 0x02:
+        parse_registers(payload, data->registers.R201, 1);
+        break;
+      case 0x2C:
+        parse_registers(payload, data->registers.R241, 22);
+        break;
+      }
       k_mutex_unlock(&data_mutex);
     }
     
@@ -149,8 +169,8 @@ static int heatpump_init(const struct device *dev) {
     .baud_rate = DT_PROP_OR(DT_INST_BUS(inst), current_speed, 9600), \
     .enable_gpio = GPIO_DT_SPEC_INST_GET(inst, enable_gpios), \
   };  \
-  K_THREAD_DEFINE(sniffer_tid_##inst, 2048, sniffer, &heatpump_cfg_##inst, NULL, NULL, 5, 0, 0); \
   static struct heatpump_data heatpump_data_##inst; \
+  K_THREAD_DEFINE(sniffer_tid_##inst, 2048, sniffer, &heatpump_cfg_##inst, &heatpump_data_##inst, NULL, 5, 0, 0); \
   DEVICE_DT_INST_DEFINE(inst, heatpump_init, NULL, &heatpump_data_##inst, &heatpump_cfg_##inst, POST_KERNEL, 90, &heatpump_api);
 
 DT_INST_FOREACH_STATUS_OKAY(HEATPUMP_DEFINE);

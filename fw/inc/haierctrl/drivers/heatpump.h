@@ -16,13 +16,47 @@ struct heatpump_config {
   struct gpio_dt_spec enable_gpio;
 };
 
+struct regs {
+  uint16_t R101[6];
+  uint16_t R141[16];
+  uint16_t R201[1];
+  uint16_t R241[22];
+};
+
 struct heatpump_data {
   int modbus_client_iface;
+  struct regs registers;
 };
 
 enum heatpump_state {
   HEATPUMP_STATE_ON = 0,
-  HEATPUMP_STATE_OFF
+  HEATPUMP_STATE_OFF,
+  HEATPUMP_STATE_COOLING,
+  HEATPUMP_STATE_HEATING,
+  HEATPUMP_STATE_DHW,
+  HEATPUMP_STATE_COOL_DHW,
+  HEATPUMP_STATE_HEAT_DHW,
+  HEATPUMP_STATE_INVALID,
+};
+
+enum heatpump_mode {
+  HEATPUMP_MODE_ECO = 0,
+  HEATPUMP_MODE_QUIET,
+  HEATPUMP_MODE_TURBO,
+  HEATPUMP_MODE_INVALID,
+
+  HEATPUMP_MODE_NONE,
+  HEATPUMP_MODE_COOL,
+  HEATPUMP_MODE_HEAT,
+};
+
+enum heatpump_threeway {
+  THREEWAY_OFF = 0,
+  THREEWAY_DHW,
+  THREEWAY_CH,
+  THREEWAY_ANTIFREEZE,
+  THREEWAY_DEFROST,
+  THREEWAY_INVALID
 };
 
 typedef enum heatpump_state (*heatpump_get_state_t)(const struct device *dev);
