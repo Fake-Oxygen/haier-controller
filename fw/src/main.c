@@ -21,12 +21,16 @@ int main() {
     led_on_dt(&led_0);
     k_msleep(500);
     led_off_dt(&led_0);
-    k_msleep(500);
-    LOG_INF("3 Way: %d", heatpump_get_3way(heatpump));
-    LOG_INF("CH temp: %f", (double)heatpump_read_ch_temp(heatpump));
-    LOG_INF("DHW temp: %f", (double)heatpump_read_dhw_temp(heatpump));
-    LOG_INF("Heater state: %d", heatpump_read_heater_state(heatpump));
-    LOG_INF("Mode: %d", heatpump_read_mode(heatpump));
-    LOG_INF("Pump state: %d", heatpump_read_pump_state(heatpump));
+    k_msleep(1500);
+    LOG_INF("3 Way: %d", heatpump_get_3way(heatpump)); // 1 - tank / both, 2 - central
+    LOG_INF("CH temp: %f", (double)heatpump_read_ch_temp(heatpump)); // target ch temp
+    LOG_INF("DHW temp: %f", (double)heatpump_read_dhw_temp(heatpump)); // current water temp
+    struct heatpump_status stat;
+    heatpump_read_status(heatpump, &stat);
+    LOG_INF("Status: %d, Tank: %d, Mode: %d", stat.is_on, stat.has_tank, stat.heat_mode); // eco / turbo / quiet
+    float ti, to;
+    heatpump_read_twi_two(heatpump, &ti, &to);
+    LOG_INF("TI: %f, TO: %f", (double)ti, (double)to);
+    // LOG_INF("Pump state: %d", heatpump_read_pump_state(heatpump)); // ?
   }
 }

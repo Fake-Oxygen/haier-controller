@@ -93,8 +93,8 @@ static void sniffer(void *p1, void *p2, void *p3) {
 
     if(uart_read_bytes(cfg->uart, payload, header[1], K_MSEC(100))) {
       k_mutex_lock(&data_mutex, K_FOREVER);
-      LOG_HEXDUMP_INF(header, 2, "Header");
-      LOG_HEXDUMP_INF(payload, header[1], "Payload");
+      // LOG_HEXDUMP_INF(header, 2, "Header");
+      // LOG_HEXDUMP_INF(payload, header[1], "Payload");
       switch (header[1]) {
       case 0x0C:
         parse_registers(payload, data->registers.R101, 6);
@@ -157,12 +157,31 @@ static enum heatpump_mode read_mode(const struct device *dev) {
   return mode;
 }
 
+static int read_twi_two(const struct device *dev, float *ti, float *to) {
+  struct heatpump_data *data = dev->data;
+  struct ti_to_info t_info;
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  int err = get_twi_two_info(data->registers.R141, 16, &t_info);
+  k_mutex_unlock(&data_mutex);
+  *ti = t_info.ti;
+  *to = t_info.to;
+  return err;
+}
+
 static enum heatpump_state read_pump_state(const struct device *dev) {
   struct heatpump_data *data = dev->data;
   k_mutex_lock(&data_mutex, K_FOREVER);
   enum heatpump_state state = get_pump_state(data->registers.R141, 16);
   k_mutex_unlock(&data_mutex);
   return state;
+}
+
+static int read_pump_status(const struct device *dev, struct heatpump_status *stat) {
+  struct heatpump_data *data = dev->data;
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  int err = get_state(data->registers.R101, 6, stat);
+  k_mutex_unlock(&data_mutex);
+  return err;
 }
 
 static const struct heatpump_driver_api heatpump_api = {
@@ -172,6 +191,8 @@ static const struct heatpump_driver_api heatpump_api = {
   .read_heater_state = read_heater_state,
   .read_heatpump_mode = read_mode,
   .read_pump_state = read_pump_state,
+  .read_twi_two = read_twi_two,
+  .read_status = read_pump_status
 };
 
 static int heatpump_init(const struct device *dev) {

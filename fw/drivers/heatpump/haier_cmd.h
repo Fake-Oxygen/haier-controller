@@ -43,12 +43,6 @@ struct tsat_info {
   float tsat_act;
 };
 
-struct heatpump_status {
-  bool is_on;
-  bool has_tank;
-  enum heatpump_mode heat_mode;
-};
-
 enum heatpump_threeway get_3way_state(const uint16_t *r141_regs, size_t count);
 int get_arch_errors(const uint16_t *r241_regs, size_t count, struct arch_errors *err);
 int get_ch_temp(const uint16_t *r101_regs, size_t count, float *temp);
