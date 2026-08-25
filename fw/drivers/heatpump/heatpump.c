@@ -12,6 +12,7 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 #include <sys/errno.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/logging/log.h>
@@ -23,19 +24,39 @@
 LOG_MODULE_REGISTER(heatpump_driver, CONFIG_LOG_DEFAULT_LEVEL);
 
 K_MUTEX_DEFINE(data_mutex);
+K_SEM_DEFINE(write_sem, 0, 1);
 
-static int write_pump(const struct device *dev) {
+struct write_request {
+  bool pending;
+  bool transmitting;
+};
+
+static struct write_request write_req_data;
+
+static int write_pump(const struct device *dev, uint16_t addr, uint16_t *regs, size_t len) {
   const struct heatpump_config *cfg = dev->config;
   const struct heatpump_data *data = dev->data;
   if(data->modbus_client_iface < 0)
     return -EINVAL;
+  
+  k_sem_reset(&write_sem);
+  write_req_data.pending = true;
 
-  uint16_t val = 120;
+  LOG_INF("Waiting for write semaphore");
+  if(k_sem_take(&write_sem, K_MSEC(5000)) != 0) {
+    LOG_ERR("Write timeout");
+    write_req_data.pending = false;
+    return -ETIMEDOUT;
+  }
+  
+  write_req_data.transmitting = true;
   gpio_pin_set_dt(&cfg->enable_gpio, 1);
   k_msleep(1000);
-  int err = modbus_write_holding_regs(data->modbus_client_iface, cfg->slave_addr, 100, &val, 1);
-  k_msleep(1000);
+  int err = modbus_write_holding_regs(data->modbus_client_iface, cfg->slave_addr, addr, regs, len);
+  k_msleep(200);
   gpio_pin_set_dt(&cfg->enable_gpio, 0);
+  write_req_data.pending = false;
+  write_req_data.transmitting = false;
   return err;
 }
 
@@ -72,6 +93,11 @@ static void sniffer(void *p1, void *p2, void *p3) {
   LOG_INF("Modbus sniffer started...");
 
   while(1) {
+    if(write_req_data.transmitting) {
+      k_msleep(100);
+      continue;
+    }
+
     uint8_t addr;
     if(!uart_read_bytes(cfg->uart, &addr, 1, K_FOREVER))
       continue;
@@ -107,6 +133,11 @@ static void sniffer(void *p1, void *p2, void *p3) {
         break;
       case 0x2C:
         parse_registers(payload, data->registers.R241, 22);
+        if(write_req_data.pending) {
+          LOG_INF("Giving write semaphore");
+          k_sem_give(&write_sem);
+          k_msleep(300);
+        }
         break;
       }
       k_mutex_unlock(&data_mutex);
@@ -184,6 +215,17 @@ static int read_pump_status(const struct device *dev, struct heatpump_status *st
   return err;
 }
 
+static int set_pump_ch_temp(const struct device *dev, float temp) {
+  struct heatpump_data *data = dev->data;
+  uint16_t regs[6];
+  LOG_INF("Setting temp to %f", (double)temp);
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  int err = set_ch_temp(data->registers.R101, 6, temp, regs);
+  k_mutex_unlock(&data_mutex);
+  write_pump(dev, 101, regs, 6);
+  return err;
+}
+
 static const struct heatpump_driver_api heatpump_api = {
   .get_3way = get_3way,
   .read_ch_temp = read_ch_temp,
@@ -192,7 +234,8 @@ static const struct heatpump_driver_api heatpump_api = {
   .read_heatpump_mode = read_mode,
   .read_pump_state = read_pump_state,
   .read_twi_two = read_twi_two,
-  .read_status = read_pump_status
+  .read_status = read_pump_status,
+  .set_ch_temp = set_pump_ch_temp,
 };
 
 static int heatpump_init(const struct device *dev) {
