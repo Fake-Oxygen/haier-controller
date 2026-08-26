@@ -226,6 +226,36 @@ static int set_pump_ch_temp(const struct device *dev, float temp) {
   return err;
 }
 
+static int set_pump_dhw_temp(const struct device *dev, float temp) {
+  struct heatpump_data *data = dev->data;
+  uint16_t regs[6];
+  LOG_INF("Setting temp to %f", (double)temp);
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  int err = set_dhw_temp(data->registers.R101, 6, temp, regs);
+  k_mutex_unlock(&data_mutex);
+  write_pump(dev, 101, regs, 6);
+  return err;
+}
+
+static int set_pump_mode(const struct device *dev, enum heatpump_mode mode) {
+  uint16_t regs[1];
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  int err = set_mode(mode, regs);
+  k_mutex_unlock(&data_mutex);
+  write_pump(dev, 201, regs, 1);
+  return err;
+}
+
+static int set_pump_state(const struct device *dev, enum heatpump_state state) {
+  struct heatpump_data *data = dev->data;
+  uint16_t regs[6];
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  int err = set_state(data->registers.R101, 6, state, regs);
+  k_mutex_unlock(&data_mutex);
+  write_pump(dev, 101, regs, 6);
+  return err;
+}
+
 static const struct heatpump_driver_api heatpump_api = {
   .get_3way = get_3way,
   .read_ch_temp = read_ch_temp,
@@ -236,6 +266,9 @@ static const struct heatpump_driver_api heatpump_api = {
   .read_twi_two = read_twi_two,
   .read_status = read_pump_status,
   .set_ch_temp = set_pump_ch_temp,
+  .set_dhw_temp = set_pump_dhw_temp,
+  .set_mode = set_pump_mode,
+  .set_state = set_pump_state,
 };
 
 static int heatpump_init(const struct device *dev) {

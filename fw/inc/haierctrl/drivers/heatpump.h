@@ -72,6 +72,8 @@ typedef float (*read_float_t)(const struct device *dev);
 typedef int (*read_float2_t)(const struct device *dev, float *ti, float *to);
 typedef int (*read_hp_status_t)(const struct device *dev, struct heatpump_status *stat);
 typedef int (*set_float_t)(const struct device *dev, float val);
+typedef int (*set_heatpump_mode_t)(const struct device *dev, enum heatpump_mode mode);
+typedef int (*set_heatpump_state_t)(const struct device *dev, enum heatpump_state state);
 
 __subsystem struct heatpump_driver_api {
   heatpump_get_3way_t get_3way;
@@ -83,6 +85,9 @@ __subsystem struct heatpump_driver_api {
   read_float2_t read_twi_two;
   read_hp_status_t read_status;
   set_float_t set_ch_temp;
+  set_float_t set_dhw_temp;
+  set_heatpump_mode_t set_mode;
+  set_heatpump_state_t set_state;
 };
 
 static inline enum heatpump_threeway heatpump_get_3way(const struct device *dev) {
@@ -128,5 +133,20 @@ static inline int heatpump_read_status(const struct device *dev, struct heatpump
 static inline int heatpump_set_ch_temp(const struct device *dev, float temp) {
   __ASSERT_NO_MSG(dev != NULL);
   return DEVICE_API_GET(heatpump, dev)->set_ch_temp(dev, temp);
+}
+
+static inline int heatpump_set_dhw_temp(const struct device *dev, float temp) {
+  __ASSERT_NO_MSG(dev != NULL);
+  return DEVICE_API_GET(heatpump, dev)->set_dhw_temp(dev, temp);
+}
+
+static inline int heatpump_set_mode(const struct device *dev, enum heatpump_mode mode) {
+  __ASSERT_NO_MSG(dev != NULL);
+  return DEVICE_API_GET(heatpump, dev)->set_mode(dev, mode);
+}
+
+static inline int heatpump_set_state(const struct device *dev, enum heatpump_state state) {
+  __ASSERT_NO_MSG(dev != NULL);
+  return DEVICE_API_GET(heatpump, dev)->set_state(dev, state);
 }
 #endif 

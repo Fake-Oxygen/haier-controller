@@ -1,5 +1,7 @@
 #include "zephyr/device.h"
 #include "zephyr/kernel.h"
+#include <stdlib.h>
+#include <sys/errno.h>
 #include <zephyr/drivers/led.h>
 #include <zephyr/devicetree.h>
 
@@ -31,13 +33,48 @@ int main() {
     // LOG_INF("Status: %d, Tank: %d, Mode: %d", stat.is_on, stat.has_tank, stat.heat_mode); // eco / turbo / quiet
     float ti, to;
     heatpump_read_twi_two(heatpump, &ti, &to);
-    LOG_INF("TI: %f, TO: %f", (double)ti, (double)to);
+    // LOG_INF("TI: %f, TO: %f", (double)ti, (double)to);
     // LOG_INF("Pump state: %d", heatpump_read_pump_state(heatpump)); // ?
   }
 }
 
 static int cmd_set_ch(const struct shell *sh, size_t argc, char **argv) {
-  return heatpump_set_ch_temp(heatpump, 33);
+  if(argc != 2)
+    return -EINVAL;
+  char *err;
+  float temp = strtof(argv[1], &err);
+  return heatpump_set_ch_temp(heatpump, temp);
 }
 
 SHELL_CMD_REGISTER(set_ch, NULL, "sets heater temperature", cmd_set_ch);
+
+static int cmd_set_dhw(const struct shell *sh, size_t argc, char **argv) {
+  if(argc != 2)
+    return -EINVAL;
+  char *err;
+  float temp = strtof(argv[1], &err);
+  return heatpump_set_dhw_temp(heatpump, temp);
+}
+
+SHELL_CMD_REGISTER(set_dhw, NULL, "sets tank temperature", cmd_set_dhw);
+
+static int cmd_set_mode(const struct shell *sh, size_t argc, char **argv) {
+  if(argc != 2)
+    return -EINVAL;
+  char *err;
+  int mode = strtol(argv[1], &err, 0);
+  return heatpump_set_mode(heatpump, mode);
+}
+
+SHELL_CMD_REGISTER(set_mode, NULL, "sets heatpump mode", cmd_set_mode);
+
+static int cmd_set_state(const struct shell *sh, size_t argc, char **argv) {
+  if(argc != 2)
+    return -EINVAL;
+  char *err;
+  int mode = strtol(argv[1], &err, 0);
+  return heatpump_set_state(heatpump, mode);
+}
+
+SHELL_CMD_REGISTER(set_state, NULL, "sets heatpump state", cmd_set_state);
+
