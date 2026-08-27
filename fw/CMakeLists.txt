@@ -15,6 +15,7 @@ target_sources(app PRIVATE
   src/shell.c
   src/relay.c
   src/rom.c
+  src/temp.c
 )
 
 add_subdirectory(drivers)

@@ -19,7 +19,6 @@
     heating = &heat_sw;
     cooling = &cool_sw;
     freq-lim = &lim_sw;
-    dev-id = &ds2401;
     temp = &ds18b20;
     heatpump = &heatpump0;
   };
@@ -54,10 +53,6 @@
   w1_bus_id: w1_bus_id {
     compatible = "zephyr,w1-gpio";
     gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
-    
-    ds2401: ds2401 {
-      /* compatible = "" */
-    };
   };
 
   w1_bus_temp: w1_bus_temp {
@@ -65,7 +60,9 @@
     gpios = <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
     
     ds18b20: ds18b20 {
-
+      compatible = "maxim,ds18b20";
+      label = "DS18B20";
+      resolution = <12>;
     };
   };
     

@@ -6,6 +6,7 @@
 #include "relay.h"
 #include "rom.h"
 #include "zephyr/drivers/w1.h"
+#include "temp.h"
 
 static const struct device *heatpump = DEVICE_DT_GET(DT_ALIAS(heatpump));
 
@@ -149,3 +150,10 @@ static int cmd_read_id(const struct shell *sh, size_t argc, char **argv) {
 }
 
 SHELL_CMD_REGISTER(read_id, NULL, "Gets ROM data", cmd_read_id);
+
+static int cmd_read_temp(const struct shell *sh, size_t argc, char **argv) {
+  shell_print(sh, "VAL=%.2f", read_temp());
+  return 0;
+}
+
+SHELL_CMD_REGISTER(read_temp, NULL, "Reads temperature from DS18B20", cmd_read_temp);
