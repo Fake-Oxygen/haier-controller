@@ -1,6 +1,9 @@
+#include "relay.h"
+#include <sys/errno.h>
 #include <zephyr/shell/shell.h>
 #include <stdlib.h>
 #include <haierctrl/drivers/heatpump.h>
+#include "relay.h"
 
 static const struct device *heatpump = DEVICE_DT_GET(DT_ALIAS(heatpump));
 
@@ -121,3 +124,18 @@ SHELL_STATIC_SUBCMD_SET_CREATE(sub_heatpump,
 );
 
 SHELL_CMD_REGISTER(hp, &sub_heatpump, "Heatpump control commands", NULL);
+
+static int cmd_set_relay(const struct shell *sh, size_t argc, char **argv) {
+  if(argc != 3)
+    return -EINVAL;
+  
+  char *err;
+  uint8_t relay = strtol(argv[1], &err, 0);
+  int enable = strtol(argv[2], &err, 0);
+  if(relay >= RELAY_COUNT)
+    return -EINVAL;
+  set_relay_state(relay, enable);
+  return 0;
+}
+
+SHELL_CMD_REGISTER(set_relay, NULL, "Sets relay state", cmd_set_relay);
