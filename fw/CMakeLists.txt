@@ -14,6 +14,7 @@ target_sources(app PRIVATE
   src/wifi.c
   src/shell.c
   src/relay.c
+  src/rom.c
 )
 
 add_subdirectory(drivers)

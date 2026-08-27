@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <haierctrl/drivers/heatpump.h>
 #include "relay.h"
+#include "rom.h"
+#include "zephyr/drivers/w1.h"
 
 static const struct device *heatpump = DEVICE_DT_GET(DT_ALIAS(heatpump));
 
@@ -139,3 +141,11 @@ static int cmd_set_relay(const struct shell *sh, size_t argc, char **argv) {
 }
 
 SHELL_CMD_REGISTER(set_relay, NULL, "Sets relay state", cmd_set_relay);
+
+static int cmd_read_id(const struct shell *sh, size_t argc, char **argv) {
+  struct w1_rom rom;
+  read_id(&rom);
+  return 0;
+}
+
+SHELL_CMD_REGISTER(read_id, NULL, "Gets ROM data", cmd_read_id);
