@@ -9,6 +9,10 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(haier-controller)
 
 target_include_directories(app PRIVATE inc)
-target_sources(app PRIVATE src/main.c src/wifi.c)
+target_sources(app PRIVATE 
+  src/main.c 
+  src/wifi.c
+  src/shell.c
+)
 
 add_subdirectory(drivers)

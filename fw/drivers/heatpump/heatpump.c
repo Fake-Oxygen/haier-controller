@@ -172,6 +172,15 @@ static float read_dhw_temp(const struct device *dev) {
   return temp;
 }
 
+static float read_dhw_target_temp(const struct device *dev) {
+  struct heatpump_data *data = dev->data;
+  float temp; 
+  k_mutex_lock(&data_mutex, K_FOREVER);
+  get_dhw_target_temp(data->registers.R101, 6, &temp);
+  k_mutex_unlock(&data_mutex);
+  return temp;
+}
+
 static enum heatpump_state read_heater_state(const struct device *dev) {
   struct heatpump_data *data = dev->data;
   k_mutex_lock(&data_mutex, K_FOREVER);
@@ -260,6 +269,7 @@ static const struct heatpump_driver_api heatpump_api = {
   .get_3way = get_3way,
   .read_ch_temp = read_ch_temp,
   .read_dhw_temp = read_dhw_temp,
+  .read_dhw_target_temp = read_dhw_target_temp,
   .read_heater_state = read_heater_state,
   .read_heatpump_mode = read_mode,
   .read_pump_state = read_pump_state,

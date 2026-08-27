@@ -79,6 +79,7 @@ __subsystem struct heatpump_driver_api {
   heatpump_get_3way_t get_3way;
   read_float_t read_ch_temp;
   read_float_t read_dhw_temp;
+  read_float_t read_dhw_target_temp;
   heatpump_get_state_t read_heater_state;
   heatpump_get_mode_t read_heatpump_mode;
   heatpump_get_state_t read_pump_state;
@@ -103,6 +104,11 @@ static inline float heatpump_read_ch_temp(const struct device *dev) {
 static inline float heatpump_read_dhw_temp(const struct device *dev) {
   __ASSERT_NO_MSG(dev != NULL);
   return DEVICE_API_GET(heatpump, dev)->read_dhw_temp(dev);
+}
+
+static inline float heatpump_read_dhw_target_temp(const struct device *dev) {
+  __ASSERT_NO_MSG(dev != NULL);
+  return DEVICE_API_GET(heatpump, dev)->read_dhw_target_temp(dev);
 }
 
 static inline enum heatpump_state heatpump_read_heater_state(const struct device *dev) {
