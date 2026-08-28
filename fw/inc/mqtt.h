@@ -1,6 +1,7 @@
 #ifndef HAIERCTRL_MQTT_H
 #define HAIERCTRL_MQTT_H
 
+#include "zephyr/net/mqtt.h"
 #include <stddef.h>
 #include <stdint.h>
 

@@ -7,12 +7,17 @@
 #include "zephyr/kernel.h"
 #include "zephyr/logging/log.h"
 #include "zephyr/net/net_ip.h"
+#include "zephyr/net/socket.h"
+#include "zephyr/net/socket_poll.h"
+#include "zephyr/sleep.h"
 #include <stddef.h>
 #include <stdint.h>
+#include <string.h>
 #include <sys/errno.h>
 #include <zephyr/posix/arpa/inet.h>
 
 LOG_MODULE_REGISTER(mqtt, CONFIG_LOG_DEFAULT_LEVEL);
+static const struct device *heatpump = DEVICE_DT_GET(DT_ALIAS(heatpump));
 
 #define CLIENT_ID "zephyr_heatpump"
 
@@ -22,15 +27,117 @@ static uint8_t rx_buf[128];
 static uint8_t tx_buf[128];
 static bool connected = false;
 
+#define CMD_COUNT 4
+
+typedef void (*handler_t)(char *val);
+struct cmd {
+  char *name;
+  handler_t handler;
+};
+
+static void cmd_ch(char *val) {
+  char *err;
+  float temp = strtof(val, &err);
+  heatpump_set_ch_temp(heatpump, temp);
+}
+
+static void cmd_dhw(char *val) {
+  char *err;
+  float temp = strtof(val, &err);
+  heatpump_set_dhw_temp(heatpump, temp);
+}
+
+static void cmd_state(char *val) {
+  char *err;
+  int mode = strtol(val, &err, 0);
+  heatpump_set_state(heatpump, mode);
+}
+
+static void cmd_mode(char *val) {
+  char *err;
+  int mode = strtol(val, &err, 0);
+  heatpump_set_mode(heatpump, mode);
+}
+
+static struct cmd cmd_list[CMD_COUNT] = {
+  {"ch", cmd_ch}, 
+  {"dhw", cmd_dhw}, 
+  {"state", cmd_state}, 
+  {"mode", cmd_mode}
+};
+
+static int subscribe_to_topic(struct mqtt_client *client, const char *topic) {
+  struct mqtt_topic sub_topic = {
+    .topic = {
+      .utf8 = (uint8_t *)topic,
+      .size = strlen(topic)
+    },
+    .qos = MQTT_QOS_0_AT_MOST_ONCE
+  };
+
+  const struct mqtt_subscription_list sub_list = {
+    .list = &sub_topic,
+    .list_count = 1U,
+    .message_id = k_cycle_get_32()
+  };
+
+  int err = mqtt_subscribe(client, &sub_list);
+  if(err)
+    LOG_ERR("Failed to subscribe to %s, err: %d", topic, err);
+  else
+    LOG_INF("Subscribed to topic: %s", topic);
+
+  return err;
+}
+
+static void dispatch_cmd(char *data) {
+  char *ptr = data;
+  while(*ptr != ' ') {
+    ptr++;
+  }
+  *ptr = '\0';
+  ptr++;
+  for(int i = 0; i < CMD_COUNT; i++) {
+    if(!strcmp(data, cmd_list[i].name)) {
+      LOG_INF("Command dispatched: %s with value: %s", data, ptr);
+      cmd_list[i].handler(ptr);
+      return;
+    }
+  }
+}
+
 static void handler(struct mqtt_client *client, const struct mqtt_evt *evt) {
   switch (evt->type) {
+  case MQTT_EVT_PUBLISH: {
+    const struct mqtt_publish_param *p = &evt->param.publish;
+    size_t len = p->message.payload.len;
+    if (len >= sizeof(rx_buf)) {
+      LOG_ERR("Incoming payload too large!");
+      return;
+    }
+    int err = mqtt_read_publish_payload(client, rx_buf, len);
+    if (err < 0) {
+      LOG_ERR("Failed to read payload: %d", err);
+      return;
+    }
+    LOG_INF("Received command on topic: %s", p->message.topic.topic.utf8);
+    rx_buf[len] = '\0';
+    dispatch_cmd(rx_buf);
+    LOG_INF("Payload: %s", rx_buf);
+    break;
+  }
   case MQTT_EVT_CONNACK:
     if (evt->result == 0) {
       connected = true;
       LOG_INF("Successfully connected to MQTT Broker!");
+      subscribe_to_topic(client, "heatpump/cmd");
     } else {
       LOG_ERR("MQTT Connect refused by broker: %d", evt->result);
     }
+    break;
+
+  case MQTT_EVT_SUBACK:
+    LOG_INF("Subscription acknowledged by broker (Message ID: %d)", evt->param.suback.message_id);
     break;
 
   case MQTT_EVT_DISCONNECT:
@@ -59,6 +166,7 @@ void mqtt_init(const char *broker_ip) {
   client.rx_buf_size = sizeof(rx_buf);
   client.tx_buf = tx_buf;
   client.tx_buf_size = sizeof(tx_buf);
+  client.keepalive = 180;
 
   int err = mqtt_connect(&client);
   if (err) {
@@ -128,3 +236,47 @@ void publish_status(struct status_packet *packet) {
   size_t payload_len = (size_t)(state->payload - cbor_buf);
   publish_msg("heatpump/status", cbor_buf, payload_len);
 }
+
+void mqtt_thread(void *p1, void *p2, void *p3) {
+  
+  struct zsock_pollfd fds[1];
+
+  while(1) {
+    if(!connected) {
+      LOG_INF("Attempting MQTT connection...");
+      mqtt_init(BROKER_IP);
+      k_sleep(K_SECONDS(5));
+      continue;
+    }
+    
+    fds[0].fd = client.transport.tcp.sock;
+    fds[0].events = ZSOCK_POLLIN;
+    
+    int res = zsock_poll(fds, 1, 1000);
+    if(res < 0) {
+      LOG_ERR("Poll failed, err: %d", errno);
+      connected = false;
+      mqtt_abort(&client);
+      continue;
+    }
+
+    if(res > 0 && (fds[0].revents & ZSOCK_POLLIN)) {
+      int err = mqtt_input(&client);
+      if(err < 0 && err != -EAGAIN && err != -EWOULDBLOCK) {
+        LOG_ERR("mqtt input fail: %d", err);
+        connected = false;
+        mqtt_abort(&client);
+        continue;
+      }
+    }
+
+    int live_err = mqtt_live(&client);
+    if(live_err < 0 && live_err != -EAGAIN) {
+      LOG_ERR("mqtt_live error: %d", live_err);
+      connected = false;
+      mqtt_abort(&client);
+    }
+  }
+}
+
+K_THREAD_DEFINE(mqtt_sub, 4096, mqtt_thread, NULL, NULL, NULL, 7, 0, 30 * 1000);
