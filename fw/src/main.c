@@ -12,13 +12,14 @@
 #include "temp.h"
 #include "mqtt.h"
 #include "zephyr/sleep.h"
+#include "haierctrl.h"
 
 LOG_MODULE_REGISTER(heatpump, CONFIG_LOG_DEFAULT_LEVEL);
 
 static const struct device *heatpump = DEVICE_DT_GET(DT_ALIAS(heatpump));
 static const struct led_dt_spec led_0 = LED_DT_SPEC_GET(DT_NODELABEL(status_led));
 
-static void get_status(struct status_packet *packet) {
+void get_status(struct status_packet *packet) {
   float ti, to;
   heatpump_read_twi_two(heatpump, &ti, &to);
   struct heatpump_status stat;
@@ -31,6 +32,7 @@ static void get_status(struct status_packet *packet) {
   packet->opr_mode = heatpump_read_mode(heatpump);
   packet->tank_state = stat.has_tank;
   packet->heater_state = stat.heat_mode;
+  packet->driver_state = stat.is_on;
   packet->valve_state = heatpump_get_3way(heatpump);
 }
 

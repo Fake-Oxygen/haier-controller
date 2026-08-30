@@ -17,6 +17,7 @@ struct status_packet {
   uint8_t valve_state;
   uint8_t tank_state;
   uint8_t heater_state;
+  uint8_t driver_state;
 };
 
 void mqtt_init(const char *broker_ip);

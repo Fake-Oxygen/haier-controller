@@ -225,6 +225,8 @@ static int read_pump_status(const struct device *dev, struct heatpump_status *st
 }
 
 static int set_pump_ch_temp(const struct device *dev, float temp) {
+  if(temp < 6 || temp > 50)
+    return -EINVAL;
   struct heatpump_data *data = dev->data;
   uint16_t regs[6];
   LOG_INF("Setting temp to %f", (double)temp);
@@ -236,6 +238,8 @@ static int set_pump_ch_temp(const struct device *dev, float temp) {
 }
 
 static int set_pump_dhw_temp(const struct device *dev, float temp) {
+  if(temp < 6 || temp > 50)
+    return -EINVAL;
   struct heatpump_data *data = dev->data;
   uint16_t regs[6];
   LOG_INF("Setting temp to %f", (double)temp);
@@ -247,6 +251,8 @@ static int set_pump_dhw_temp(const struct device *dev, float temp) {
 }
 
 static int set_pump_mode(const struct device *dev, enum heatpump_mode mode) {
+  if(mode < 0 || mode > 2)
+    return -EINVAL;
   uint16_t regs[1];
   k_mutex_lock(&data_mutex, K_FOREVER);
   int err = set_mode(mode, regs);
@@ -256,6 +262,10 @@ static int set_pump_mode(const struct device *dev, enum heatpump_mode mode) {
 }
 
 static int set_pump_state(const struct device *dev, enum heatpump_state state) {
+  if(state < 0 || state > 6) {
+    LOG_ERR("Invalid state!");
+    return -EINVAL;
+  }
   struct heatpump_data *data = dev->data;
   uint16_t regs[6];
   k_mutex_lock(&data_mutex, K_FOREVER);

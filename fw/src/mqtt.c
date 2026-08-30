@@ -15,6 +15,7 @@
 #include <string.h>
 #include <sys/errno.h>
 #include <zephyr/posix/arpa/inet.h>
+#include "haierctrl.h"
 
 LOG_MODULE_REGISTER(mqtt, CONFIG_LOG_DEFAULT_LEVEL);
 static const struct device *heatpump = DEVICE_DT_GET(DT_ALIAS(heatpump));
@@ -101,6 +102,10 @@ static void dispatch_cmd(char *data) {
     if(!strcmp(data, cmd_list[i].name)) {
       LOG_INF("Command dispatched: %s with value: %s", data, ptr);
       cmd_list[i].handler(ptr);
+      k_sleep(K_SECONDS(1));
+      struct status_packet packet;
+      get_status(&packet);
+      publish_status(&packet);
       return;
     }
   }
@@ -216,7 +221,7 @@ void publish_status(struct status_packet *packet) {
 
   zcbor_new_encode_state(state, 4, cbor_buf, sizeof(cbor_buf), 0);
 
-  bool ok = zcbor_list_start_encode(state, 9);
+  bool ok = zcbor_list_start_encode(state, 10);
   ok &= zcbor_float32_put(state, packet->ambient_temp); 
   ok &= zcbor_float32_put(state, packet->ch_temp); 
   ok &= zcbor_float32_put(state, packet->dhw_temp); 
@@ -226,7 +231,8 @@ void publish_status(struct status_packet *packet) {
   ok &= zcbor_uint32_put(state, packet->valve_state); 
   ok &= zcbor_uint32_put(state, packet->tank_state); 
   ok &= zcbor_uint32_put(state, packet->heater_state);
-  ok &= zcbor_list_end_encode(state, 9);
+  ok &= zcbor_uint32_put(state, packet->driver_state);
+  ok &= zcbor_list_end_encode(state, 10);
 
   if (!ok) {
       LOG_ERR("Failed to encode CBOR packet!");
