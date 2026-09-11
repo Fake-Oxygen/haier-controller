@@ -560,8 +560,9 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Production/",
       "specctra_dsn": "",
+      "step": "haier-controller.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -684,7 +685,7 @@
         "uuid": "2531e837-23eb-4a10-aa8a-546e9218b917"
       }
     ],
-    "used_designators": "#GND29,#GND42,TP1-13,C1-16,#3.3V1-12,VBUS1-9,+3.3V1-13,H1-4,VBUS_B4,SW1,GND1-41,R1-23,Q1-5,D1-17,U1-6,VBUS_A3,P1,K1-4,J1-12,PWR1",
+    "used_designators": "Q1-5,U1-6,D1-17,PWR1,J1-12,K1-4,VBUS_A3,P1,#3.3V1-12,VBUS1-9,C1-16,GND1-41,R1-23,TP1-13,#GND29,#GND42,SW1,VBUS_B4,H1-4,+3.3V1-13",
     "variants": []
   },
   "sheets": [
