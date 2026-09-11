@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "2531e837-23eb-4a10-aa8a-546e9218b917")
 	(paper "A4")
+	(title_block
+		(title "Haier Controller")
+		(date "2026-07-13")
+		(rev "1.1.0")
+		(company "MRWorkshop")
+	)
 	(lib_symbols
 		(symbol "Capacitors:GRM188Z71A106KA73D"
 			(pin_numbers
@@ -7925,6 +7931,12 @@
 		)
 	)
 	(junction
+		(at 181.61 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06ae3a9f-f43f-4d02-b7ea-62e5ab38c0c8")
+	)
+	(junction
 		(at 45.72 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7935,6 +7947,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0f2e26ef-1156-47b2-a5af-c60eefd61857")
+	)
+	(junction
+		(at 99.695 22.225)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "10b1ef01-6309-4387-8549-5390ad5126ee")
 	)
 	(junction
 		(at 172.085 30.48)
@@ -7979,6 +7997,12 @@
 		(uuid "34af915d-623a-4abc-93f9-0c76c581ce70")
 	)
 	(junction
+		(at 131.445 180.975)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3bf0f0e5-83d2-483e-90f8-9e5709d7a288")
+	)
+	(junction
 		(at 250.19 131.445)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8021,6 +8045,12 @@
 		(uuid "536d7855-9b96-49c8-bf67-c71d2235135c")
 	)
 	(junction
+		(at 118.745 22.225)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55ccbf2a-8f39-4962-9627-9ca8064fa898")
+	)
+	(junction
 		(at 86.36 67.945)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8039,10 +8069,22 @@
 		(uuid "5eb898ef-3a2c-43e6-bc2d-cacc3854db82")
 	)
 	(junction
+		(at 76.835 24.765)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "61ff23ce-ff75-48da-9284-b6a9394ca8d9")
+	)
+	(junction
 		(at 104.775 103.505)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "62046f56-240c-4262-af73-051748607601")
+	)
+	(junction
+		(at 247.65 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "63ed03f6-29e8-448a-a5db-cb2b93b9ea9b")
 	)
 	(junction
 		(at 146.685 175.895)
@@ -8055,6 +8097,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6cd165df-821f-4f64-8a31-0b87c2864663")
+	)
+	(junction
+		(at 132.715 145.415)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d675f14-0855-4265-9e5a-1ce779f9d20d")
 	)
 	(junction
 		(at 81.915 81.915)
@@ -8085,12 +8133,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7d05d42a-3042-43c9-886e-d3c0aecc9fa2")
-	)
-	(junction
-		(at 76.835 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8ea12dfc-5864-4904-9183-8b38b06992eb")
 	)
 	(junction
 		(at 252.095 90.805)
@@ -8133,6 +8175,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a9d0396d-5f50-497f-859b-69ceeb7f31cb")
+	)
+	(junction
+		(at 69.215 22.225)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aaae398a-5553-4cca-97da-759f00c57312")
 	)
 	(junction
 		(at 146.685 140.335)
@@ -8189,6 +8237,12 @@
 		(uuid "c1116024-a944-4984-81b4-2ab1a5e8ae4a")
 	)
 	(junction
+		(at 69.215 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c33af0b7-6b21-4615-9b3f-3da16661ad48")
+	)
+	(junction
 		(at 205.105 93.345)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8205,6 +8259,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca51c062-ab79-4d9f-9ede-42898aac6f65")
+	)
+	(junction
+		(at 76.835 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cce803e4-956b-4d74-a178-958bca16e833")
 	)
 	(junction
 		(at 29.21 126.365)
@@ -8229,12 +8289,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "da5441f9-1c1a-4981-a782-db9337bc7ffa")
-	)
-	(junction
-		(at 69.215 30.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ed1fff81-f4b5-4a46-b2e7-b31c42a8e9fc")
 	)
 	(junction
 		(at 165.735 30.48)
@@ -8638,6 +8692,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.215 22.225) (xy 90.805 22.225)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11a45d27-6c84-40fb-a9ce-3830cb6c9e1b")
+	)
+	(wire
+		(pts
 			(xy 131.445 106.045) (xy 142.24 106.045)
 		)
 		(stroke
@@ -8655,6 +8719,16 @@
 			(type default)
 		)
 		(uuid "128a7dd4-0c2c-4889-b5cf-5cdecd397695")
+	)
+	(wire
+		(pts
+			(xy 247.65 151.765) (xy 247.65 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "128c38a2-f5f0-4f3b-b739-540922ffc76e")
 	)
 	(wire
 		(pts
@@ -8685,6 +8759,16 @@
 			(type default)
 		)
 		(uuid "142813db-8300-4f83-b4fd-7f11df3637ad")
+	)
+	(wire
+		(pts
+			(xy 181.61 143.51) (xy 181.61 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14e338dc-0f31-429d-95d6-9971fa11cce1")
 	)
 	(wire
 		(pts
@@ -8748,7 +8832,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.825 180.975) (xy 135.89 180.975)
+			(xy 123.825 180.975) (xy 131.445 180.975)
 		)
 		(stroke
 			(width 0)
@@ -8855,6 +8939,16 @@
 			(type default)
 		)
 		(uuid "20a76af1-4b38-4168-a53d-1d8d6468c0af")
+	)
+	(wire
+		(pts
+			(xy 131.445 187.325) (xy 131.445 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21f0115e-a2ad-4c79-a59d-a06f0bc4f7ef")
 	)
 	(wire
 		(pts
@@ -9068,6 +9162,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.715 145.415) (xy 135.89 145.415)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31c3646c-8049-4b19-8ac5-758dde14284e")
+	)
+	(wire
+		(pts
 			(xy 77.47 140.335) (xy 80.01 140.335)
 		)
 		(stroke
@@ -9228,6 +9332,26 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 143.51) (xy 184.785 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cc069f6-81a4-4110-a346-c1604ba96181")
+	)
+	(wire
+		(pts
+			(xy 95.885 24.765) (xy 99.695 24.765)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ccdd857-76f9-49f3-b9a6-57a030d5a705")
+	)
+	(wire
+		(pts
 			(xy 252.095 90.805) (xy 252.095 92.075)
 		)
 		(stroke
@@ -9378,7 +9502,7 @@
 	)
 	(wire
 		(pts
-			(xy 262.255 148.59) (xy 262.255 151.765)
+			(xy 262.255 148.59) (xy 262.255 153.035)
 		)
 		(stroke
 			(width 0)
@@ -9628,7 +9752,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.835 27.94) (xy 76.835 33.02)
+			(xy 76.835 19.05) (xy 76.835 24.765)
 		)
 		(stroke
 			(width 0)
@@ -9768,6 +9892,16 @@
 	)
 	(wire
 		(pts
+			(xy 247.65 146.05) (xy 251.46 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61d765dd-81e1-4387-9ac1-fddc98776e54")
+	)
+	(wire
+		(pts
 			(xy 146.685 165.735) (xy 146.685 170.18)
 		)
 		(stroke
@@ -9808,7 +9942,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 146.05) (xy 251.46 146.05)
+			(xy 236.22 146.05) (xy 247.65 146.05)
 		)
 		(stroke
 			(width 0)
@@ -9855,6 +9989,16 @@
 			(type default)
 		)
 		(uuid "66718a25-13de-43c2-b4a5-be55f16fc61f")
+	)
+	(wire
+		(pts
+			(xy 118.745 22.225) (xy 118.745 18.415)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66b7bd99-04c5-45e6-ae4b-75161633c72b")
 	)
 	(wire
 		(pts
@@ -9928,6 +10072,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.715 151.765) (xy 132.715 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6da46751-d165-43f2-afdb-f69308882868")
+	)
+	(wire
+		(pts
 			(xy 26.035 119.38) (xy 29.21 119.38)
 		)
 		(stroke
@@ -9988,6 +10142,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.695 24.765) (xy 99.695 22.225)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71c71c1b-3c82-4a14-b05e-901a3eabd100")
+	)
+	(wire
+		(pts
 			(xy 74.295 90.805) (xy 74.295 86.995)
 		)
 		(stroke
@@ -10035,6 +10199,16 @@
 			(type default)
 		)
 		(uuid "7761cec1-4a75-40ae-863c-18e19980ae94")
+	)
+	(wire
+		(pts
+			(xy 247.65 146.05) (xy 247.65 146.685)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77826a46-daeb-4274-a4ec-f69cf7015e09")
 	)
 	(wire
 		(pts
@@ -10098,6 +10272,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.695 22.225) (xy 118.745 22.225)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d58ee17-7305-49de-a256-ebc605b3a97f")
+	)
+	(wire
+		(pts
 			(xy 212.725 135.255) (xy 212.725 139.7)
 		)
 		(stroke
@@ -10108,7 +10292,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.215 27.94) (xy 69.215 30.48)
+			(xy 69.215 19.05) (xy 69.215 22.225)
 		)
 		(stroke
 			(width 0)
@@ -10288,6 +10472,16 @@
 	)
 	(wire
 		(pts
+			(xy 131.445 180.975) (xy 135.89 180.975)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ea08776-dffd-4931-a7a1-8f1e3e9eda88")
+	)
+	(wire
+		(pts
 			(xy 260.35 98.425) (xy 260.35 99.695)
 		)
 		(stroke
@@ -10325,6 +10519,16 @@
 			(type default)
 		)
 		(uuid "93c2f1ab-7244-4bc4-9821-bec587c85c45")
+	)
+	(wire
+		(pts
+			(xy 69.215 22.225) (xy 69.215 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97b58552-41b5-4225-9d50-c53c536e9c07")
 	)
 	(wire
 		(pts
@@ -10385,6 +10589,16 @@
 			(type default)
 		)
 		(uuid "9ff59cc5-ec9b-46fa-97b2-58fd46344503")
+	)
+	(wire
+		(pts
+			(xy 181.61 149.86) (xy 181.61 150.495)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a08f365e-0b1c-4d4b-be76-5625fe656415")
 	)
 	(wire
 		(pts
@@ -10565,6 +10779,16 @@
 			(type default)
 		)
 		(uuid "aba17d20-6eca-4e97-b015-a67225325be9")
+	)
+	(wire
+		(pts
+			(xy 132.715 145.415) (xy 132.715 146.685)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abef82e9-873d-46ff-8fa2-416d1b7b9c37")
 	)
 	(wire
 		(pts
@@ -10798,7 +11022,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.825 145.415) (xy 135.89 145.415)
+			(xy 123.825 145.415) (xy 132.715 145.415)
 		)
 		(stroke
 			(width 0)
@@ -10825,6 +11049,16 @@
 			(type default)
 		)
 		(uuid "bda175f1-0e3d-446f-b6d8-5bd80dfde6c5")
+	)
+	(wire
+		(pts
+			(xy 95.885 22.225) (xy 99.695 22.225)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c04ebd6e-a3b1-4d80-a32e-4eef75c8fdf3")
 	)
 	(wire
 		(pts
@@ -11078,6 +11312,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.835 24.765) (xy 76.835 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d600cbc1-a970-4505-9d35-b4148c297497")
+	)
+	(wire
+		(pts
 			(xy 156.21 93.98) (xy 156.21 97.155)
 		)
 		(stroke
@@ -11168,7 +11412,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 143.51) (xy 184.785 143.51)
+			(xy 172.72 143.51) (xy 181.61 143.51)
 		)
 		(stroke
 			(width 0)
@@ -11408,6 +11652,16 @@
 	)
 	(wire
 		(pts
+			(xy 131.445 180.975) (xy 131.445 182.245)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7f845a2-3efb-4a73-aff3-b9429f7291b2")
+	)
+	(wire
+		(pts
 			(xy 205.105 83.82) (xy 205.105 86.995)
 		)
 		(stroke
@@ -11458,7 +11712,17 @@
 	)
 	(wire
 		(pts
-			(xy 118.745 30.48) (xy 118.745 26.035)
+			(xy 76.835 24.765) (xy 90.805 24.765)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecf7b2ee-6c5e-49f1-919c-96c8526765c1")
+	)
+	(wire
+		(pts
+			(xy 118.745 30.48) (xy 118.745 22.225)
 		)
 		(stroke
 			(width 0)
@@ -12091,6 +12355,84 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Globals:GND")
+		(at 131.445 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "04cdf67a-9d7a-46f9-84f0-c0b6237b297b")
+		(property "Reference" "#GND043"
+			(at 131.953 191.008 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 131.445 191.008 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 131.445 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 131.445 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 131.445 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b4528c51-9f98-4664-8306-04990674a1ea")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "#GND043")
 					(unit 1)
 				)
 			)
@@ -13380,7 +13722,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "1d9d6753-2022-4544-87ad-bd810de35b2f")
 		(property "Reference" "D1"
 			(at 108.204 34.9251 90)
@@ -14548,7 +14890,7 @@
 	)
 	(symbol
 		(lib_id "Globals:VBUS_B")
-		(at 69.215 27.94 0)
+		(at 69.215 19.05 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14559,7 +14901,7 @@
 		(fields_autoplaced yes)
 		(uuid "2b4aa320-b968-4e21-b8d4-179615a11b6f")
 		(property "Reference" "VBUS_B4"
-			(at 69.215 25.654 0)
+			(at 69.215 16.764 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -14570,7 +14912,7 @@
 			)
 		)
 		(property "Value" "VBUS_B"
-			(at 69.215 26.416 0)
+			(at 69.215 17.526 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -14581,7 +14923,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.215 27.94 0)
+			(at 69.215 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14592,7 +14934,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.215 27.94 0)
+			(at 69.215 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14603,7 +14945,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 69.215 27.94 0)
+			(at 69.215 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14911,6 +15253,107 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Resistors:CRCW06030000Z0EI")
+		(at 90.805 22.225 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "32220dba-8998-41d8-a350-8b53b6047f85")
+		(property "Reference" "R29"
+			(at 89.916 20.955 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0R"
+			(at 96.266 20.955 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 92.329 36.195 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?20035"
+			(at 91.821 31.877 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD ZERO OHM JUMPER"
+			(at 91.059 30.099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06030000Z0EI"
+			(at 91.059 34.163 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "0.33W"
+			(at 93.345 27.813 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3e84d23b-0004-48ac-a352-e74ad9bb1719")
+		)
+		(pin "1"
+			(uuid "f143f35e-d025-47b5-b377-2c08d163e28e")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -15269,6 +15712,84 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Globals:GND")
+		(at 181.61 151.765 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "376d8829-9dde-4738-bf39-551605cc8eb7")
+		(property "Reference" "#GND045"
+			(at 182.118 153.543 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 153.543 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 151.765 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 151.765 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 181.61 151.765 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e5cc86a2-40a2-4417-9628-3fb063f82f39")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "#GND045")
 					(unit 1)
 				)
 			)
@@ -15805,7 +16326,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "43ed3f26-06c0-4b3b-939e-8b801d41581b")
 		(property "Reference" "R8"
 			(at 212.344 45.212 90)
@@ -16653,6 +17174,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Globals:GND")
+		(at 132.715 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "547554fa-51e1-4f67-8fbf-1d73e7ac2b91")
+		(property "Reference" "#GND044"
+			(at 133.223 155.448 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.715 155.448 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.715 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.715 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 132.715 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a2e02365-1bf0-4ed6-8fc9-f3507fdfd821")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "#GND044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Relays:HFD23/005-1ZS")
 		(at 151.765 171.45 0)
 		(mirror x)
@@ -17189,7 +17788,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "5d3d1516-feb9-404e-a908-4dd9582e7add")
 		(property "Reference" "J7"
 			(at 229.87 48.3871 0)
@@ -17449,6 +18048,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Resistors:CRGH0603F10K")
+		(at 131.445 182.245 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6422e36f-b730-4574-af06-e5fe72ee36a0")
+		(property "Reference" "R24"
+			(at 136.144 185.674 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 135.89 183.896 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 120.777 183.515 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-1&DocType=Data+Sheet&DocLang=English&PartCntxt=9-1879505-1"
+			(at 124.333 186.309 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 10K 0.2W"
+			(at 125.857 185.547 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRGH0603F10K"
+			(at 122.555 183.261 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "0.2W"
+			(at 118.999 182.753 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "68729341-c7eb-4faf-8e21-199da0c058f5")
+		)
+		(pin "2"
+			(uuid "cfa3c96f-0e3c-4c3a-b85d-aa9cc9d05904")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Misc:TestPoint-2mm")
 		(at 48.895 62.865 0)
 		(unit 1)
@@ -17611,7 +18313,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "67c88c24-b011-48e6-8071-4c37af23d8e7")
 		(property "Reference" "C3"
 			(at 46.228 81.28 90)
@@ -18337,11 +19039,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
+		(dnp yes)
 		(uuid "6cb50502-e9a2-4d45-ab6d-62667c14a5e8")
 		(property "Reference" "U2"
-			(at 93.345 24.13 0)
+			(at 87.884 41.656 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18351,7 +19052,7 @@
 			)
 		)
 		(property "Value" "LM66200DRLR"
-			(at 93.345 26.67 0)
+			(at 93.218 39.878 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19132,6 +19833,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Resistors:CRGH0603F10K")
+		(at 132.715 146.685 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "78ab202b-566e-4e21-b4ef-3389af718fdb")
+		(property "Reference" "R25"
+			(at 137.414 150.114 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 137.16 148.336 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 122.047 147.955 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-1&DocType=Data+Sheet&DocLang=English&PartCntxt=9-1879505-1"
+			(at 125.603 150.749 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 10K 0.2W"
+			(at 127.127 149.987 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRGH0603F10K"
+			(at 123.825 147.701 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "0.2W"
+			(at 120.269 147.193 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "06f1bcda-b87b-4e99-9493-df10d4e5da73")
+		)
+		(pin "2"
+			(uuid "b257a43a-06b3-48e2-ab23-cce1b1f9de49")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Relays:HFD23/005-1ZS")
 		(at 151.765 135.89 0)
 		(mirror x)
@@ -19586,7 +20390,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "850ad565-b66d-4648-bf3b-d85d1086a4ca")
 		(property "Reference" "J2"
 			(at 29.464 73.025 0)
@@ -20331,6 +21135,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Globals:GND")
+		(at 247.65 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d4c005d-7683-4298-a13c-49ee68e5763f")
+		(property "Reference" "#GND046"
+			(at 248.158 155.448 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 247.65 155.448 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6288d9e1-513e-496f-8262-3b4417820666")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "#GND046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Misc:TestPoint-2mm")
 		(at 274.32 98.425 0)
 		(unit 1)
@@ -20756,7 +21638,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "9250015f-6a5b-4e65-86ef-6296ec3a80c7")
 		(property "Reference" "C4"
 			(at 69.977 34.798 90)
@@ -22346,7 +23228,7 @@
 	)
 	(symbol
 		(lib_id "Globals:GND")
-		(at 262.255 153.035 0)
+		(at 262.255 154.305 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22357,7 +23239,7 @@
 		(fields_autoplaced yes)
 		(uuid "af44f191-b507-4bb2-934c-d1f6ff4aa8e1")
 		(property "Reference" "#GND38"
-			(at 262.763 154.813 0)
+			(at 262.763 156.083 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -22368,7 +23250,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 262.255 154.813 0)
+			(at 262.255 156.083 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -22378,7 +23260,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 262.255 153.035 0)
+			(at 262.255 154.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22389,7 +23271,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 262.255 153.035 0)
+			(at 262.255 154.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22400,7 +23282,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 262.255 153.035 0)
+			(at 262.255 154.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22606,7 +23488,7 @@
 	)
 	(symbol
 		(lib_id "Globals:VBUS")
-		(at 118.745 26.035 0)
+		(at 118.745 18.415 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22617,7 +23499,7 @@
 		(fields_autoplaced yes)
 		(uuid "b86ca54e-4026-452a-ba8e-4597e3122619")
 		(property "Reference" "VBUS5"
-			(at 118.745 23.749 0)
+			(at 118.745 16.129 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -22628,7 +23510,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 118.745 24.511 0)
+			(at 118.745 16.891 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -22639,7 +23521,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.745 26.035 0)
+			(at 118.745 18.415 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22650,7 +23532,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.745 26.035 0)
+			(at 118.745 18.415 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22661,7 +23543,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 118.745 26.035 0)
+			(at 118.745 18.415 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22785,6 +23667,107 @@
 			(project "haier-controller"
 				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
 					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Resistors:CRCW06030000Z0EI")
+		(at 90.805 24.765 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bc875253-8e60-4dea-a995-7631bf0a5285")
+		(property "Reference" "R28"
+			(at 89.916 23.622 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0R"
+			(at 96.266 23.622 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 92.329 38.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/doc?20035"
+			(at 91.821 34.417 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD ZERO OHM JUMPER"
+			(at 91.059 32.639 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW06030000Z0EI"
+			(at 91.059 36.703 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "0.33W"
+			(at 93.345 30.353 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f0c8b855-10cb-4093-90ad-a28f73a57eca")
+		)
+		(pin "1"
+			(uuid "41159e2c-071f-4000-b1f4-849f5dd04451")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -24221,6 +25204,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Resistors:CRGH0603F10K")
+		(at 181.61 144.78 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d09c8b6a-54f7-4782-bba4-e10dbeb1266f")
+		(property "Reference" "R26"
+			(at 186.309 148.209 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 186.055 146.431 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 170.942 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-1&DocType=Data+Sheet&DocLang=English&PartCntxt=9-1879505-1"
+			(at 174.498 148.844 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 10K 0.2W"
+			(at 176.022 148.082 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRGH0603F10K"
+			(at 172.72 145.796 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "0.2W"
+			(at 169.164 145.288 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5728cff7-5d92-46a3-86ac-fa85414a3a2e")
+		)
+		(pin "2"
+			(uuid "f33defc0-574f-4588-b1b0-ab431ee31a32")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Globals:GND")
 		(at 151.765 107.95 0)
 		(unit 1)
@@ -24731,7 +25817,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "dfd7b39a-8d78-41b0-8185-32e605808a6f")
 		(property "Reference" "R2"
 			(at 108.458 32.004 0)
@@ -25653,6 +26739,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Resistors:CRGH0603F10K")
+		(at 247.65 146.685 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ece7d48c-2c88-498c-b507-d1a02b5cfed3")
+		(property "Reference" "R27"
+			(at 252.349 150.114 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 252.095 148.336 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SMD:R_0603"
+			(at 236.982 147.955 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773204-1&DocType=Data+Sheet&DocLang=English&PartCntxt=9-1879505-1"
+			(at 240.538 150.749 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD CRGH0603 1% 10K 0.2W"
+			(at 242.062 149.987 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRGH0603F10K"
+			(at 238.76 147.701 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Power" "0.2W"
+			(at 235.204 147.193 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9c710530-389a-4d58-8a46-6d45259a4800")
+		)
+		(pin "2"
+			(uuid "ef503783-c733-49b7-9e16-1e2b056ff18f")
+		)
+		(instances
+			(project "haier-controller"
+				(path "/2531e837-23eb-4a10-aa8a-546e9218b917"
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Globals:GND")
 		(at 223.52 107.95 0)
 		(unit 1)
@@ -25739,7 +26928,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f6c5d440-f895-43f0-836a-e2ae3a6a8c26")
 		(property "Reference" "U5"
@@ -26013,7 +27202,7 @@
 	)
 	(symbol
 		(lib_id "Globals:VBUS_A")
-		(at 76.835 27.94 0)
+		(at 76.835 19.05 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -26024,7 +27213,7 @@
 		(fields_autoplaced yes)
 		(uuid "f95df009-a93d-4a1d-9032-ca97e1b2531b")
 		(property "Reference" "VBUS_A3"
-			(at 76.835 25.654 0)
+			(at 76.835 16.764 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -26035,7 +27224,7 @@
 			)
 		)
 		(property "Value" "VBUS_A"
-			(at 76.835 26.416 0)
+			(at 76.835 17.526 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -26046,7 +27235,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.835 27.94 0)
+			(at 76.835 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26057,7 +27246,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.835 27.94 0)
+			(at 76.835 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26068,7 +27257,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.835 27.94 0)
+			(at 76.835 19.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
