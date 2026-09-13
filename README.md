@@ -1,93 +1,189 @@
-# haier-controller
+# Haier Heat Pump Controller
 
+Custom controller and monitoring interface for Haier heat pumps using the **YR-E27 remote-control interface / Modbus RTU**.
 
+The project combines an embedded controller, custom hardware, firmware, and host-side tools for communicating with and monitoring the heat pump.
 
-## Getting started
+![Assembly](./img/assembly.png)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Overview
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+The controller interfaces directly with the heat pump's communication bus and provides access to operational data and control parameters that are otherwise handled by the original control system.
 
-## Add your files
+The system is built around an **ESP32-C6** running **Zephyr RTOS**. The controller communicates with the heat pump over UART/Modbus RTU and exposes selected telemetry and control functionality through Wi-Fi and MQTT.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+The repository also contains hardware and mechanical design files, as well as software utilities used for protocol investigation, testing, and monitoring.
 
+## System Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │    Haier Heat Pump  │
+                    │                     │
+                    │  YR-E27 / Modbus RTU│
+                    └──────────┬──────────┘
+                               │
+                         UART / RS-485
+                               │
+                    ┌──────────▼──────────┐
+                    │   ESP32-C6          │
+                    │                     │
+                    │   Zephyr RTOS       │
+                    │   Modbus client     │
+                    │   Heat pump driver  │
+                    │   Control logic     │
+                    └───────┬───────┬─────┘
+                            │       │
+                          Wi-Fi    GPIO
+                            │       │
+                     ┌──────▼───┐   ├── Relay outputs
+                     │   MQTT   │   └── Status / sensors
+                     └──────────┘
 ```
-cd existing_repo
-git remote add origin http://192.168.10.154:8888/home-automation/haier-controller.git
-git branch -M main
-git push -uf origin main
+
+The exact hardware interfaces and signal routing are documented in the hardware design files.
+
+## Heat Pump Communication
+
+The main purpose of the project is direct communication with the Haier heat pump.
+
+Communication uses **Modbus RTU over UART**. The firmware implements the required register access and translates the heat pump's register data into higher-level operating parameters.
+
+The implementation currently provides access to parameters including:
+
+* CH temperature
+* DHW temperature
+* CH target temperature
+* DHW target temperature
+* Operating mode
+* Valve state
+* Tank status
+* Heater operating state
+* Other system status registers
+
+The firmware can also write supported registers to change selected operating parameters.
+
+The register definitions and protocol implementation are located in the firmware sources.
+
+## Hardware
+
+![PCB](./img/pcb.png)
+
+The controller is based on an **ESP32-C6**.
+
+The hardware provides interfaces for:
+
+* Heat pump communication
+* Wi-Fi
+* Temperature measurement
+* Relay/control outputs
+* Status indication
+
+The complete hardware design is located in [`hw/`](./hw).
+
+Refer to the schematics and PCB files there for the actual electrical implementation.
+
+## Mechanical Design
+
+Mechanical parts and enclosure designs are located in [`hwm/`](./hwm).
+
+The enclosure is designed around the controller hardware and its intended installation environment.
+
+Available CAD/manufacturing files should be treated as the authoritative source for dimensions and mechanical details.
+
+## Firmware
+
+The embedded firmware is located in [`fw/`](./fw).
+
+It is written in **C** and uses **Zephyr RTOS**.
+
+The firmware is responsible for:
+
+* Modbus communication with the heat pump
+* Register decoding
+* Heat pump state/control handling
+* Wi-Fi connectivity
+* MQTT communication
+* Telemetry publishing
+* Local I/O such as relays and sensors
+
+The main application and hardware-specific code are organized within the firmware tree.
+
+## MQTT
+
+The controller publishes heat pump telemetry over MQTT, allowing the data to be consumed by external systems such as home-automation or monitoring software.
+
+Telemetry is encoded using **CBOR** before being published.
+
+The MQTT interface is implemented in the firmware and is intended to decouple the heat pump interface from higher-level monitoring and automation systems.
+
+## Host-Side Tools
+
+The [`sw/`](./sw) directory contains software used during development and operation of the system.
+
+These tools are separate from the ESP32 firmware and are useful for tasks such as:
+
+* Monitoring communication
+* Testing the heat pump interface
+* Experimenting with the protocol
+* Simulating heat pump behavior
+
+In particular, `sniffer.py` and `mock_heatpump.py` are used for working with the communication protocol without necessarily relying on the complete embedded system.
+
+## Building the Firmware
+
+The firmware uses the Zephyr build system and `west`.
+
+Initialize the project:
+
+```bash
+./init.sh
 ```
 
-## Integrate with your tools
+Build for the target board:
 
-- [ ] [Set up project integrations](http://192.168.10.154:8888/home-automation/haier-controller/-/settings/integrations)
+```bash
+west build -p auto -b esp32c6_devkitc_hpcore
+```
 
-## Collaborate with your team
+Flash the resulting firmware:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+```bash
+west flash
+```
 
-## Test and Deploy
+The required Zephyr SDK and Python dependencies must be installed before building.
 
-Use the built-in continuous integration in GitLab.
+## Repository Structure
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+```text
+.
+├── fw/                  # ESP32-C6 firmware
+│   ├── src/             # Application code
+│   ├── drivers/         # Hardware / heat pump drivers
+│   └── boards/          # Board-specific configuration
+│
+├── hw/                  # Electronics design
+│   ├── ...              # Schematics / PCB files
+│   └── ...
+│
+├── hwm/                 # Mechanical design
+│   ├── ...              # CAD / STL files
+│   └── ...
+│
+├── sw/                  # Host-side tools
+│   ├── sniffer.py       # Protocol analysis tool
+│   ├── mock_heatpump.py # Heat pump simulator
+│   └── ...
+│
+└── README.md
+```
 
-***
+## Development Status
 
-# Editing this README
+This repository contains an actively developed controller and reverse-engineering effort for interfacing with the Haier heat pump communication system.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+The firmware, hardware, and host-side tooling are maintained together because development of the controller depends on understanding and testing the heat pump's communication protocol.
 
-## Suggestions for a good README
+For the current implementation status, refer to the firmware and software sources rather than assuming that every documented interface is production-ready.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
