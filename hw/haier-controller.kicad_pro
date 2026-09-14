@@ -233,6 +233,7 @@
       "track_widths": [
         0.0,
         0.2,
+        0.25,
         0.35
       ],
       "tuning_pattern_settings": {
@@ -265,6 +266,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.7,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -685,7 +690,7 @@
         "uuid": "2531e837-23eb-4a10-aa8a-546e9218b917"
       }
     ],
-    "used_designators": "R1-29,GND1-41,#3.3V1-12,C1-16,VBUS1-9,P1,+3.3V1-13,H1-4,VBUS_B4-5,SW1,#GND29,#GND42-46,TP1-13,Q1-5,U1-6,D1-17,K1-4,PWR1,J1-12,VBUS_A3-4",
+    "used_designators": "U1-6,D1-17,PWR1,J1-12,K1-4,P1,GND1-41,R1-29,Q1-5,VBUS1-9,C1-16,#3.3V1-12,VBUS_A3-4,TP1-13,#GND29,#GND42-46,SW1,VBUS_B4-5,H1-4,+3.3V1-13",
     "variants": []
   },
   "sheets": [
